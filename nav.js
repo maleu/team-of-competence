@@ -32,7 +32,7 @@ function loadCRMmain(){
 }).done(function( msg ) {
 	$('#content').html(msg);
 });		
-}
+};
 
 function loadCRMtest(){
 	$.ajax({
