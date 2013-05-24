@@ -1,10 +1,13 @@
 <div id='crm_wrap'>
+	<?php 
+	$id = $_POST['P_id'];
+	echo 'TEST: '.$id; ?>
 	<div id='crmControls'>
 		<button class='crmNav' name="newClient" id="crm_newClient" value="new">Neuer Kunde</button>
 		<button name="findClient" class='crmNav' id='crm_findClient' value="search">Suche Kunde</button>
-		<form action='index.php' method="post">
-			<input name="crm_clientID" type="text" class='crmNav' id="crm_input_clientID" maxlength="5" />
-			<input type="submit" value="öffnen" class='crmNav' />
+		<form>
+			<input name="crm_clientID" type="text" class='crmNav' id="crm_input_clientID" onkeydown="if (event.keyCode == 13) document.getElementById('crm_openByIDButton').click()" maxlength="5" />
+			<button type="button" id='crm_openByIDButton' onclick="crm_openClientbyID()" class='crmNav'>Aufrufen</button>
 		</form>
 		<div id='clearfloat'> </div>
 	</div>

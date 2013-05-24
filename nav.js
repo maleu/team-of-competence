@@ -19,7 +19,7 @@ function loadHomepage(){
 });		
 }
 
-function loadCRMmain(){
+function loadCRMmain(id){
 	$.ajax({
 	type: "POST",
 	url: self + "CRM/index.php",
@@ -27,7 +27,7 @@ function loadCRMmain(){
 		$('#content').html(loadingImageTag);
 	},
 	data: {					
-		test: 23
+		test: id
 	}
 }).done(function( msg ) {
 	$('#content').html(msg);
@@ -48,4 +48,21 @@ function loadCRMtest(){
 	$('#content').html(msg);
 });		
 }
+
+function crm_openClientbyID(){
+	id = document.getElementById('crm_input_clientID').value;
+	$.ajax({
+	type: "POST",
+	url: self + "CRM/index.php",
+	beforeSend: function() {						
+		$('#content').html(loadingImageTag);
+	},
+	data: {					
+		P_id: id
+	}
+}).done(function( msg ) {
+	$('#content').html(msg);
+});		
+}
+
 </script>

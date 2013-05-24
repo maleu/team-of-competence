@@ -2,6 +2,8 @@
 <head>
 	<?php
 		include("nav.js");
+		ini_set ("display_errors", "1");
+		error_reporting(E_ALL);
 	?>
 	<link href="index.css" rel="stylesheet" type="text/css">
 	<link href="CRM/crm_style.css" rel="stylesheet" type="text/css">
@@ -42,7 +44,7 @@
 				Startseite
 			</div>
 			<div class=hauptNavElement>
-				<a href="#" onclick="loadCRMmain();">CRMmain</a>
+				<a href="#" onclick="loadCRMmain('1');">CRMmain</a>
 				<ul>
 				<li><a href="#" onclick="loadCRMtest();">CRMtest</a></li>
 				</ul>
