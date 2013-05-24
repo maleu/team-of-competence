@@ -1,5 +1,5 @@
 <?php
-    $id = $POST_id;
+
 include_once '../db_connect.php';
 if (mysqli_connect_errno() ==0 )
 { ?>
