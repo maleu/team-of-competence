@@ -1,0 +1,4 @@
+#robots.txt die alles verbietet, denn wir wollen nicht von google indiziert werden
+
+User-agent: *
+Disallow: /
