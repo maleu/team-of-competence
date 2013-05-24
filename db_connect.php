@@ -1,1 +1,0 @@
-<?php $db = @new mysqli('localhost', 'web27', 'Boss1337', 'usr_web27_XXX'); //DB FEHLT NOCH!! ?>
