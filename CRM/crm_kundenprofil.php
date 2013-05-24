@@ -25,5 +25,5 @@ if (mysqli_connect_errno() ==0 )
 	} // end if no error
 	else
 	{echo("<div id='dbcon'>No DB COnnection possible at all, error is ".mysqli_connect_errno()." : ".mysqli_connect_error()."</div><!--end dbcon -->"); }
-	$db->close();
+	//$db->close();
 ?>
