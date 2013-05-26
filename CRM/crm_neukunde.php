@@ -8,6 +8,6 @@
 		Ort: <input name="crm_neuOrt" type="text" class='crmNeukundeForm' id="crm_input_Ort" maxlength="20" />
 		Telefonnummer: <input name="crm_neuTelefon" type="text" class='crmNeukundeForm' id="crm_input_Telefon" maxlength="20" />
 		eMail: <input name="crm_neueMail" type="text" class='crmNeukundeForm' id="crm_input_eMail" maxlength="20" />
-		<button type="button" id='crm_createClientButton' onclick="crm_createClientSubmit()" class='crmNeukundeForm'>Aufrufen</button>
+		<button type="button" id='crm_createClientButton' onclick="crm_createClientSubmit()" class='crmNeukundeForm'>erstellen</button>
 	</form>
 </div>
