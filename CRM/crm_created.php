@@ -19,11 +19,13 @@
 	</div>
 
 	<?php
-if (isset( $_POST['nachname'] ))
+if (isset( $_POST['P_nachname'] ))
 {
     if (get_magic_quotes_gpc()) { $_POST = array_map( 'stripslashes', $_POST ); }
-    $vorname    = $_POST['vorname'];
-    $nachname = $_POST['nachname'];
+    $vorname    = $_POST['P_vorname'];
+    $nachname = $_POST['P_nachname'];
+	$firma = $_POST['P_firma'];
+	echo($nachname);
  
 	include_once 'db_connect.php';
     if (mysqli_connect_errno() == 0)
@@ -33,7 +35,7 @@ if (isset( $_POST['nachname'] ))
         $insert->bind_param( 'sss', $vorname, $nachname, $firma );
         $insert->execute();
 
-        if ($eintrag->affected_rows == 1)
+        if ($insert->affected_rows == 1)
         {
             echo('Neukunde '.$vorname.' '.$nachname.' wurde erfolgreich erstellt :)');
         }
@@ -46,6 +48,8 @@ if (isset( $_POST['nachname'] ))
     {
         echo("<div id='dbcon'>No DB COnnection possible at all, error is ".mysqli_connect_errno()." : ".mysqli_connect_error()."</div><!--end dbcon -->"); }
 	//$db->close();
+    } else {
+        echo "Es wurde kein Formular ausgefüllt";
     }
  
 ?>
