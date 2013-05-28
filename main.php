@@ -1,4 +1,3 @@
-<<<<<<< HEAD:main.php
 <html>
 <head>
 	<?php
