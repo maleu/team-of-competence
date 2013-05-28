@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Description of newEmptyPHP
+ * Description of lohnGehaltÜberweisen
  *
  * @author Martin Leuthold
  */
