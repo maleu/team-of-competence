@@ -40,9 +40,12 @@
 	float:left;
 }
 .hauptNavElement{
-	margin: 1px 0px 0px 5px;
+	float: left;
+	margin: 0px 1px 0px 0px;
+	background-color:#A6B8CA;
 	width:100px;
-	text-align:left;
+	height:30px;
+	text-align:center;
 }
 .hauptNavZeile{
 	clear:both; 
