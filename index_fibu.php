@@ -1,3 +1,4 @@
+ <?php header('Content-Type: text/html;charset=utf-8'); ?> 
 <html>
 <head>
 	<?php
@@ -13,6 +14,8 @@
 //			loadHomepage();
 //		});
 	</script>
+        
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 </head>
 <body>
 
@@ -57,8 +60,10 @@
 			</div>
 		</div>
 		<div id="content" class=content style="border: 1px solid red;">
-			<?php // include "FIBU/gehaltabrechnungErstellen.php"; ?>
-                    <?php include "FIBU/gehaltabrechnungErstellen.php"; ?>
+                    <?php // include "FIBU/gehaltabrechnungErstellen.php"; ?>
+                    <?php // include 'FIBU/lohnGehaltUeberweisen.php'; ?>
+                    <?php // include 'FIBU/krankenkasseUeberweisen.php'; ?>
+                    <?php include 'FIBU/wareingangsrechnungLieferantEditieren.php'; ?>
 		</div>
 	</div>
 </div>
