@@ -27,7 +27,7 @@
 					FAQ
 				</div>
 				<div class=headerMenuElement>
-					Kontakt
+					Kontakten
 				</div>
 					
 			</div>
@@ -44,9 +44,9 @@
 				Startseite
 			</div>
 			<div class=hauptNavElement>
-				<a href="#" onclick="loadCRMmain('1');">CRMmain</a>
+				<a href="#" onClick="loadCRMmain('1');">CRMmain</a>
 				<ul>
-				<li><a href="#" onclick="loadCRMtest();">CRMtest</a></li>
+				<li><a href="#" onClick="loadCRMtest();">CRMtest</a></li>
 				</ul>
 			</div>
 			<div class=hauptNavElement>
