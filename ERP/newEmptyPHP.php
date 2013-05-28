@@ -5,4 +5,6 @@
  *
  * @author Martin Leuthold
  */
+
+// Marion ist cool!
 ?>
