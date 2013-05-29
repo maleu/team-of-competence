@@ -1,11 +1,11 @@
 <?php
 /**
- * Description of finanzamtmeldungErstellen
+ * Description of lohnGehaltsAendern
  *
  * @author Martin Leuthold
  */
 ?>
-<h1>Finanzamtmeldung erstellen</h1>
+<h1>Lohn- bzw. Gehaltsänderung durchführen</h1>
 <p>Bitte geben Sie die Mitarbeiter ID oder den Namen des Mitarbeiter ein.</p>
 
 <table>
@@ -18,6 +18,14 @@
         <td>Vorname: <input type="text"/></td>
     </tr>
 </table>
-<p>Hinweis: Mehrfachauswahl mit der STRG Taste möglich!</p>
+
+
+
+<p>Bitte geben Sie den Betrag der Lohn-/ Gehaltsänderung ein!</p>
+<table>
+	<tr>
+    	<td>Betrag: <input type="number"/>€</td>
+        </tr>
+        </table>
 
 <button>Abrechnen</button>
