@@ -2,7 +2,7 @@
 
 /**
  * Description of ohnGehaltÄndern
- *z
+ *z1
  * @author Martin Leuthold
  */
 ?>
