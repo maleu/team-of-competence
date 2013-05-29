@@ -62,7 +62,12 @@
 		<div id="content" class=content style="border: 1px solid red;">
                     <?php // include "FIBU/gehaltabrechnungErstellen.php"; ?>
                     <?php // include 'FIBU/lohnGehaltUeberweisen.php'; ?>
-                    <?php // include 'FIBU/krankenkasseUeberweisen.php'; ?>
+                    <?php // include 'FIBU/krankenkasseUeberweisen.php'; ?>           
+                   <?php // include 'Fibu/finanzamtmeldungErstellen.php';?>
+                   <?php // include'lohnGehaltsAendern.php';?>
+                    <?php // include'lohsteuerUeberweisung.php';?>
+                     <?php // include'zahlungAnweisen.php';?>
+                   
                     <?php include 'FIBU/wareingangsrechnungLieferantEditieren.php'; ?>
 		</div>
 	</div>
