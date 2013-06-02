@@ -17,7 +17,7 @@ function loadHomepage(){
 }).done(function( msg ) {
 	$('#content').html(msg);
 });		
-}
+};
 
 function loadCRMmain(id){
 	$.ajax({
@@ -103,6 +103,6 @@ function crm_createClientSubmit(){
 }).done(function( msg ) {
 	$('#content').html(msg);
 });		
-}
+};
 
 </script>
