@@ -7,25 +7,22 @@ if (mysqli_connect_errno() ==0 )
 	<table id="table_kontaktverlauf">
 		<tbody>
 			<tr class="toprow">
-				<td>id</td>
-				<td>Partner</td>
-				<td>Datum</td>
-				<td>Inhalt</td>
-				<td>MA</td>
+				<td>KundenID</td>
+				<td>MitarbeiterID</td>
+				<td>Seit</td>
 			</tr>
 			<?php /*
-$sql = "SELECT * FROM kontaktverlauf WHERE id=".$id;
+$sql = "SELECT * FROM kontaktverlauf WHERE id=".$KundenID;
 $result=$db->prepare($sql);
 $result->execute();
-$result->bind_result($id, $partner, $kontakt, $kontaktweg, $schriftverkehr);
+$result->bind_result($KundenID, $MitarbeiterID, $Seit);
 while ($result->fetch()){ */
 			?>
 			<tr>
-				<td><?php echo '$id' ?></td>
-				<td><?php echo '$partner' ?></td>
-				<td><?php echo '$kontaktweg' ?></td>
-				<td><?php echo '$schriftverkehr' ?></td>
-				<td><?php echo '$kontakt' ?></td>
+				<td><?php echo '$KundenID' ?></td>
+				<td><?php echo '$MitarbeiterID' ?></td>
+				<td><?php echo '$Seit' ?></td>
+
 			</tr>
 			<?php // }   end while ?> 
 		</tbody>
