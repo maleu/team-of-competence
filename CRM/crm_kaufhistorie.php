@@ -7,23 +7,25 @@ if (mysqli_connect_errno() ==0 )
 	<table id="table_kaufhistorie">
 		<tbody>
 			<tr class="toprow">
-				<td>id</td>
-				<td>Datum</td>
-				<td>Artikel</td>
-				<td>Bezahlt?</td>
+				<td>KundenID</td>
+				<td>MitarbeiterID</td>
+				<td>ArtikelID</td>
+				<td>Verkaufsdatum</td>
+                                <td>Kanal</td>
 			</tr>
-	<?php /*
-$sql = "SELECT * FROM kaeufe WHERE id=".$id;
+	<?php /* Ich habe soweit wie möglich den Statement ergänzt!!!
+$sql = "SELECT * FROM Verkaufsliste WHERE id=".$ArtikelID;
 $result=$db->prepare($sql);
 $result->execute();
-$result->bind_result($id, $datum, $artikel, $bezahlt);
+$result->bind_result($KundenID, $MitarbeiterID, $ArtikelID, $Verkaufsdatum, $Kanal);
 while ($result->fetch()){ */
 			?>
 			<tr>
-				<td><?php echo '$id' ?></td>
-				<td><?php echo '$datum' ?></td>
-				<td><?php echo '$datum' ?></td>
-				<td><?php echo '$bezahlt' ?></td>
+				<td><?php echo '$KundenID' ?></td>
+				<td><?php echo '$MitarbeiterID' ?></td>
+				<td><?php echo '$ArtikelID' ?></td>
+				<td><?php echo '$Verkaufsdatum' ?></td>
+                                <td><?php echo '$Kanal' ?></td>
 			</tr>
 			<?php //} end while ?>
 		</tbody>

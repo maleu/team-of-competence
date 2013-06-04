@@ -1,11 +1,11 @@
 <?php
 /**
- * Description of gehaltabrechnungErstellen
+ * Description of lohnGehaltsAendern
  *
  * @author Martin Leuthold
  */
 ?>
-<h1>Gehaltsabrechnung erstellen</h1>
+<h1>Lohn- bzw. Gehaltsänderung durchführen</h1>
 <p>Bitte geben Sie die Mitarbeiter ID oder den Namen des Mitarbeiter ein.</p>
 
 <table>
@@ -19,17 +19,13 @@
     </tr>
 </table>
 
-<p>Bitte geben Sie den Betrag des Lohns/Gehalts ein.</p>
 
+
+<p>Bitte geben Sie den Betrag der Lohn-/ Gehaltsänderung ein!</p>
 <table>
-    <tr>
-        <td>Betrag: <input type="text"/>€</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus:  <input type="text"/>€</td>
-        <td>Vermerk: <input type="text"/></td>
-    </tr>
-</table>
+	<tr>
+    	<td>Betrag: <input type="number"/>€</td>
+        </tr>
+        </table>
 
 <button>Abrechnen</button>

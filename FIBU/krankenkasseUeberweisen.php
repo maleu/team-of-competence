@@ -1,6 +1,7 @@
 <?php
+
 /**
- * Description of gehaltabrechnungErstellen
+ * Description of krankenkasseUeberweisen
  *
  * @author Martin Leuthold
  */
@@ -19,17 +20,17 @@
     </tr>
 </table>
 
-<p>Bitte geben Sie den Betrag des Lohns/Gehalts ein.</p>
-
 <table>
     <tr>
-        <td>Betrag: <input type="text"/>€</td>
-        <td></td>
+        <td>Krankenkasse ID:</td>
+        <td><input type="text"/></td>
     </tr>
     <tr>
-        <td>Bonus:  <input type="text"/>€</td>
-        <td>Vermerk: <input type="text"/></td>
+        <td>Betrag: </td>
+        <td><input type="text"/>€</td>
     </tr>
 </table>
 
-<button>Abrechnen</button>
+<button>Überweisen</button>
+
+<p>Hinweis: Hierdurch wird automatisch eine Meldung versandt!</p>
