@@ -63,12 +63,12 @@
                     <?php // include "FIBU/gehaltabrechnungErstellen.php"; ?>
                     <?php // include 'FIBU/lohnGehaltUeberweisen.php'; ?>
                     <?php // include 'FIBU/krankenkasseUeberweisen.php'; ?>           
-                   <?php // include 'Fibu/finanzamtmeldungErstellen.php';?>
-                   <?php // include'lohnGehaltsAendern.php';?>
-                    <?php // include'lohsteuerUeberweisung.php';?>
-                     <?php // include'zahlungAnweisen.php';?>
+                   <?php include 'Fibu/finanzamtmeldungErstellen.php';?>
+                   <?php // include'Fibu/lohnGehaltsAendern.php';?>
+                    <?php // include'Fibu/lohsteuerUeberweisung.php';?>
+                     <?php // include'Fibu/zahlungAnweisen.php';?>
                    
-                    <?php include 'FIBU/wareingangsrechnungLieferantEditieren.php'; ?>
+                    <?php // include 'FIBU/wareingangsrechnungLieferantEditieren.php'; ?>
 		</div>
 	</div>
 </div>
