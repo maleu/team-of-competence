@@ -30,7 +30,7 @@ if (isset( $_POST['P_nachname'] ))
 	include_once 'db_connect.php';
     if (mysqli_connect_errno() == 0)
     {
-        $sql = 'INSERT INTO `Kunden` (`vorname`, `nachname`, `firma`) VALUES (?, ?, ?)';
+        $sql = 'INSERT INTO `Kunden` (`KundenID`, `MitarbeiterID`, `Firma`, `Strasse`, `PLZ`, `Ort`, `vorname`, `nachname`, `Telefon`, `Email`) VALUES (?, ?, ?)';
         $insert = $db->prepare( $sql );
         $insert->bind_param( 'sss', $vorname, $nachname, $firma );
         $insert->execute();
