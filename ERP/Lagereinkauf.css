@@ -1,0 +1,35 @@
+.lagerNav{
+	border: 1px solid;
+	float:left;
+}
+.lagerNavElement{
+	border-bottom: 1px solid;
+}
+.lagerMain{
+	margin: 0px 0px 0px 170px;
+}
+.lagerHeader{
+	border: 2px solid;
+	height: 20px;
+	width: 830px;
+}
+.lagerHeaderLinks{
+	float:left;
+}
+.lagerHeaderRechts{
+	float:right;
+}
+.lagerHeaderElement{
+	float:left;
+	margin: 0px 15px 0px 0px;
+}
+.lagerBody{
+	float:left;
+	border: 2px solid;
+	margin: 5px 0px 0px 0px;
+	width: 810px;
+	padding: 10px;
+}
+#lagerProduktnummer{
+	size: 50;
+}

@@ -12,7 +12,6 @@ function loadHomepage(){
 		$('#content').html(loadingImageTag);
 	},
 	data: {					
-		test: 5
 	}
 }).done(function( msg ) {
 	$('#content').html(msg);
