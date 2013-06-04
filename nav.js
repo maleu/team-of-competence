@@ -6,17 +6,17 @@ var loadingImageTag = '<img src="'+self+'001_images/load_blue.gif" />';
 
 function loadHomepage(){
 	$.ajax({
-	type: "POST",
-	url: self + "homepage.php",
-	beforeSend: function() {						
-		$('#content').html(loadingImageTag);
-	},
-	data: {					
-	}
-}).done(function( msg ) {
-	$('#content').html(msg);
-});		
-};
+		type: "POST",
+		url: self + "homepage.php",
+		beforeSend: function() {						
+			$('#content').html(loadingImageTag);
+		},
+		data: {					
+		}
+	}).done(function( msg ) {
+		$('#content').html(msg);
+	});		
+}
 
 function loadCRMmain(id){
 	$.ajax({
@@ -31,7 +31,7 @@ function loadCRMmain(id){
 }).done(function( msg ) {
 	$('#content').html(msg);
 });		
-};
+}
 
 function loadCRMtest(){
 	$.ajax({
@@ -103,5 +103,19 @@ function crm_createClientSubmit(){
 	$('#content').html(msg);
 });		
 };
+
+function loadErpLagereinkauf(){
+	$.ajax({
+		type: "POST",
+		url: self + "ERP/Lagereinkauf.php",
+		beforeSend: function() {						
+			$('#content').html(loadingImageTag);
+		},
+		data: {					
+		}
+	}).done(function( msg ) {
+		$('#content').html(msg);
+	});	
+}
 
 </script>

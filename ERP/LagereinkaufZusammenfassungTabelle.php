@@ -1,20 +1,20 @@
-<div class=lagerZusammenfassungTabelleHeader>
+<div class=lagerBestellungTabelleZeile>
 	<div class=lagerZusammenfassungTabelleHeaderElement>
-		Position
+		PositionVal
 	</div>
 	<div class=lagerZusammenfassungTabelleHeaderElement>
-		Produktnummer
+		ProduktnummerVal
 	</div>
 	<div class=lagerZusammenfassungTabelleHeaderElement>
-		Produktbezeichnung
+		ProduktbezeichnungVal
 	</div>
 	<div class=lagerZusammenfassungTabelleHeaderElement>
-		Nettopreis
+		NettopreisVal
 	</div>
 	<div class=lagerZusammenfassungTabelleHeaderElement>
-		Menge
+		MengeVal
 	</div>
 	<div class=lagerZusammenfassungTabelleHeaderElement>
-		Lieferant
+		LieferantVal
 	</div>
 </div>

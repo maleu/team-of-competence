@@ -8,6 +8,7 @@
 	?>
 	<link href="index.css" rel="stylesheet" type="text/css">
 	<link href="CRM/crm_style.css" rel="stylesheet" type="text/css">
+	<link href="ERP/Lagereinkauf.css" rel="stylesheet" type="text/css">
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script type="text/javascript">
 	$( document ).ready(function() {
@@ -35,14 +36,14 @@
 		</div>
 		<div class=headerAccount>
 			<ul>
-				<li>Login</li>
+				<li>Logout</li>
 			</ul>
 		</div>
 	</div>
 </div>
 <div class=body>
 	<div class=hauptnav>
-		<div class=hauptNavElement>
+		<div class=hauptNavElement onclick="loadHomepage()">
 			Startseite
 		</div>
 		<div class=hauptNavElement onclick="loadCRMmain('1');">
@@ -50,6 +51,9 @@
 		</div>
 		<div class=hauptNavElement onclick="loadCRMtest();">
 			CRMtest
+		</div>
+		<div class=hauptNavElement onclick="loadErpLagereinkauf();">
+			Lagereinkauf
 		</div>
 	</div>
 	<hr>

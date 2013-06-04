@@ -33,3 +33,22 @@
 #lagerProduktnummer{
 	size: 50;
 }
+.lagerBestellungTabelleHeader{
+	margin: 10px 0px 10px 0px;
+	height: 20px;
+}
+.lagerBestellungTabelleElement{
+	float:left;
+	border: solid 1px;
+	padding: 0px 5px 0px 5px;
+}
+.lagerBestellungTabelleBody{
+	clear:both;
+	margin: 0px 0px 20px 0px;
+}
+#lagerBestellungAbschicken{
+	float:right;
+}
+.lagerBestellungTabelleZeile{
+
+}
