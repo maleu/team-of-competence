@@ -14,6 +14,20 @@
 	$( document ).ready(function() {
 		loadHomepage();
 	});
+        
+        function loadPage(address){
+	$.ajax({
+		type: "POST",
+		url: address,
+		beforeSend: function() {						
+			$('#content').html(loadingImageTag);
+		},
+		data: {					
+		}
+	}).done(function( msg ) {
+		$('#content').html(msg);
+	});		
+}
 	</script>
 </head>
 <body>
@@ -55,6 +69,11 @@
 		<div class=hauptNavElement onclick="loadErpLagereinkauf();">
 			Lagereinkauf
 		</div>
+            
+            <div class="hauptNavElement" onClick="javascript:loadPage('FIBU/index_personalmanagement.php');">Personalmanagement</div>
+            
+            <div class="hauptNavElement" onClick="javascript:loadPage('FIBU/index_finanzbuchhaltung.php');">Finanzbuchhaltung</div>
+            
 	</div>
 	<hr>
 	<div id="content" class=content>
