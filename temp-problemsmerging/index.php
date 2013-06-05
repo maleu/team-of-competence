@@ -1,4 +1,3 @@
- <?php header('Content-Type: text/html;charset=utf-8'); ?> 
 <html>
 <head>
 	<?php
@@ -10,12 +9,10 @@
 	<link href="CRM/crm_style.css" rel="stylesheet" type="text/css">
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script type="text/javascript">
-//		$( document ).ready(function() {
-//			loadHomepage();
-//		});
+		$( document ).ready(function() {
+			loadHomepage();
+		});
 	</script>
-        
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 </head>
 <body>
 
@@ -30,7 +27,7 @@
 					FAQ
 				</div>
 				<div class=headerMenuElement>
-					Kontakten
+					Kontakt
 				</div>
 					
 			</div>
@@ -47,9 +44,9 @@
 				Startseite
 			</div>
 			<div class=hauptNavElement>
-				<a href="#" onClick="loadCRMmain('1');">CRMmain</a>
+				<a href="#" onclick="loadCRMmain('1');">CRMmain</a>
 				<ul>
-				<li><a href="#" onClick="loadCRMtest();">CRMtest</a></li>
+				<li><a href="#" onclick="loadCRMtest();">CRMtest</a></li>
 				</ul>
 			</div>
 			<div class=hauptNavElement>
@@ -59,22 +56,14 @@
 				Posteingang
 			</div>
 		</div>
-		<div id="content" class=content style="border: 1px solid red;">
-                    <?php // include "FIBU/gehaltabrechnungErstellen.php"; ?>
-                    <?php // include 'FIBU/lohnGehaltUeberweisen.php'; ?>
-                    <?php // include 'FIBU/krankenkasseUeberweisen.php'; ?>           
-                   <?php include 'Fibu/finanzamtmeldungErstellen.php';?>
-                   <?php // include'Fibu/lohnGehaltsAendern.php';?>
-                    <?php // include'Fibu/lohsteuerUeberweisung.php';?>
-                     <?php // include'Fibu/zahlungAnweisen.php';?>
-                   
-                    <?php // include 'FIBU/wareingangsrechnungLieferantEditieren.php'; ?>
+		<div id="content" class=content>
+			Wird ersetzt.
 		</div>
 	</div>
 </div>
 
 <script language="JavaScript">
-//	loadHomepage();
+	loadHomepage();
 </script>
 
 </body>
