@@ -86,9 +86,11 @@ function crm_createClientSubmit(){
 	firma = document.getElementById('crm_input_Firma').value;
 	strasse = document.getElementById('crm_input_StrNr').value;
 	postleitzahl = document.getElementById('crm_input_PLZ').value;
-	ort = document.getElementById('crm_input_Ort').value;
+	Ort = document.getElementById('crm_input_Ort').value;
 	tel = document.getElementById('crm_input_Telefon').value;
-	email = document.getElementById('crm_input_eMail').value;
+	Email = document.getElementById('crm_input_Email').value;
+        KundenID = document.getElementById('crm_input_Kunden').value;
+        MitarbeiterID = document.getElementById('crm_input_Mitarbeiter').value;
 
 	$.ajax({
 	type: "POST",

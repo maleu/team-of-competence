@@ -24,7 +24,15 @@ if (isset( $_POST['P_nachname'] ))
     if (get_magic_quotes_gpc()) { $_POST = array_map( 'stripslashes', $_POST ); }
     $vorname    = $_POST['P_vorname'];
     $nachname = $_POST['P_nachname'];
-	$firma = $_POST['P_firma'];
+    $firma = $_POST['P_firma'];
+	$StrasseHausnummer = $_POST['P_StrNr'];
+        $Postleitzahl = $_POST['P_PLZ'];
+        $Ort = $_POST['P_Ort'];
+        $Telefonnummer = $_POST['P_Telefon'];
+        $Email = $_POST['P_Email'];
+        $KundenID = $_POST['P_Kunden'];
+        $MitarbeiterID = $_POST['P_Mitarbeiter'];
+       
 	echo($nachname);
  
 	include_once 'db_connect.php';
