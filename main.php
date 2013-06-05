@@ -15,17 +15,17 @@
 		loadHomepage();
 	});
         
-        function loadPage(address){
+        function loadPage(address, targetframe){
 	$.ajax({
 		type: "POST",
 		url: address,
 		beforeSend: function() {						
-			$('#content').html(loadingImageTag);
+			$('#'+targetframe).html(loadingImageTag);
 		},
 		data: {					
 		}
 	}).done(function( msg ) {
-		$('#content').html(msg);
+		$('#'+targetframe).html(msg);
 	});		
 }
 	</script>
@@ -70,9 +70,9 @@
 			Lagereinkauf
 		</div>
             
-            <div class="hauptNavElement" onClick="javascript:loadPage('FIBU/index_personalmanagement.php');">Personalmanagement</div>
+            <div class="hauptNavElement" onClick="javascript:loadPage('FIBU/index_personalmanagement.php', 'content');">Personalmanagement</div>
             
-            <div class="hauptNavElement" onClick="javascript:loadPage('FIBU/index_finanzbuchhaltung.php');">Finanzbuchhaltung</div>
+            <div class="hauptNavElement" onClick="javascript:loadPage('FIBU/index_finanzbuchhaltung.php', 'content');">Finanzbuchhaltung</div>
             
 	</div>
 	<hr>
