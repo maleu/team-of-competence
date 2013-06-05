@@ -1,5 +1,6 @@
 <html>
 <head>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
 	<?php
 		include("nav.js");
 		ini_set ("display_errors", "1");
@@ -7,138 +8,79 @@
 	?>
 	<link href="index.css" rel="stylesheet" type="text/css">
 	<link href="CRM/crm_style.css" rel="stylesheet" type="text/css">
+	<link href="ERP/Lagereinkauf.css" rel="stylesheet" type="text/css">
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script type="text/javascript">
-		$( document ).ready(function() {
-			loadHomepage();
-		});
+	$( document ).ready(function() {
+		loadHomepage();
+	});
+        
+        function loadPage(address, targetframe){
+	$.ajax({
+		type: "POST",
+		url: address,
+		beforeSend: function() {						
+			$('#'+targetframe).html(loadingImageTag);
+		},
+		data: {					
+		}
+	}).done(function( msg ) {
+		$('#'+targetframe).html(msg);
+	});		
+}
 	</script>
 </head>
 <body>
 
 <div class=container>
-	<div class=header>
-		<div class=logo>
-			
-		</div>
-		<div class=headerRight>
-			<div class=headerMenu>
-				<div class=headerMenuElement>
-					FAQ
-				</div>
-				<div class=headerMenuElement>
-					Kontakt
-				</div>
-					
-			</div>
-			<div class=headerAccount>
-				<ul>
-					<li>Login</li>
-				</ul>
-			</div>
-		</div>
+
+<div class=header>
+	<div class=logo>
+		
 	</div>
-	<div class=body>
-		<div class=hauptnav>
-			<div class=hauptNavElement>
-				Startseite
+	<div class=headerRight>
+		<div class=headerMenu>
+			<div class=headerMenuElement>
+				FAQ
 			</div>
-			<div class=hauptNavElement>
-				<a href="#" onclick="loadCRMmain('1');">CRMmain</a>
-				<ul>
-				<li><a href="#" onclick="loadCRMtest();">CRMtest</a></li>
-				</ul>
+			<div class=headerMenuElement>
+				Kontakt
 			</div>
-			<div class=hauptNavElement>
-				Kalender
-			</div>
-			<div class=hauptNavElement>
-				Posteingang
-			</div>
+				
 		</div>
-		<div id="content" class=content>
-			Wird ersetzt.
+		<div class=headerAccount>
+			<ul>
+				<li>Logout</li>
+			</ul>
 		</div>
 	</div>
 </div>
-
-<script language="JavaScript">
-	loadHomepage();
-</script>
-
-</body>
-
-</html>
-=======
-<html>
-<head>
-	<?php
-		include("nav.js");
-		ini_set ("display_errors", "1");
-		error_reporting(E_ALL);
-	?>
-	<link href="index.css" rel="stylesheet" type="text/css">
-	<link href="CRM/crm_style.css" rel="stylesheet" type="text/css">
-	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script type="text/javascript">
-		$( document ).ready(function() {
-			loadHomepage();
-		});
-	</script>
-</head>
-<body>
-
-<div class=container>
-	<div class=header>
-		<div class=logo>
-			
+<div class=body>
+	<div class=hauptnav>
+		<div class=hauptNavElement onclick="loadHomepage()">
+			Startseite
 		</div>
-		<div class=headerRight>
-			<div class=headerMenu>
-				<div class=headerMenuElement>
-					FAQ
-				</div>
-				<div class=headerMenuElement>
-					Kontakten
-				</div>
-					
-			</div>
-			<div class=headerAccount>
-				<ul>
-					<li>Login</li>
-				</ul>
-			</div>
+		<div class=hauptNavElement onclick="loadCRMmain('1');">
+			CRMmain
 		</div>
+		<div class=hauptNavElement onclick="loadCRMtest();">
+			CRMtest
+		</div>
+		<div class=hauptNavElement onclick="loadErpLagereinkauf();">
+			Lagereinkauf
+		</div>
+            
+            <div class="hauptNavElement" onClick="javascript:loadPage('FIBU/index_personalmanagement.php', 'content');">Personalmanagement</div>
+            
+            <div class="hauptNavElement" onClick="javascript:loadPage('FIBU/index_finanzbuchhaltung.php', 'content');">Finanzbuchhaltung</div>
+            
 	</div>
-	<div class=body>
-		<div class=hauptnav>
-			<div class=hauptNavElement>
-				Startseite
-			</div>
-			<div class=hauptNavElement>
-				<a href="#" onClick="loadCRMmain('1');">CRMmain</a>
-				<ul>
-				<li><a href="#" onClick="loadCRMtest();">CRMtest</a></li>
-				</ul>
-			</div>
-			<div class=hauptNavElement>
-				Kalender
-			</div>
-			<div class=hauptNavElement>
-				Posteingang
-			</div>
-		</div>
-		<div id="content" class=content>
-			Wird ersetzt.
-		</div>
+	<hr>
+	<div id="content" class=content>
+		Wird ersetzt.
 	</div>
 </div>
-
-<script language="JavaScript">
-	loadHomepage();
-</script>
-
+</div>
 </body>
 
 </html>
->>>>>>> 25cdac107dc7a9c36bfea69da2fec159cfa1f99d:index.php
