@@ -84,7 +84,8 @@
     
 		<b>Bestellstatus abrufen</b>
 		<div class=lagerBodyBestellungStatus>
-			<input type="text" id="lagerProduktnummer" size="50" value="Bestellnummer eingeben..."  />
+			<input type="text" id="lagerProduktnummer" size="50" value="Bestellnummer eingeben..." onblur="if (this.value == '') {this.value = 'Bestellnummer eingeben...';}"
+				onfocus="if (this.value == 'Bestellnummer eingeben...') {this.value = '';}" />
             
 			<input type="button" id="..." value="Status abrufen" onclick="...()" /><br>
             Status: Bestellung wurde versand</br>
@@ -93,7 +94,10 @@
             
 <b>Bestellung stornieren</b>
 	  <div class=lagerBodyStornierenStatus>
-			<input type="text" id="..." size="50" value="Bestellnummer eingeben..."  />
+			<input type="text" id="..." size="50" value="Bestellnummer eingeben..."
+            onblur="if (this.value == '') {this.value = 'Bestellnummer eingeben...';}"
+				onfocus="if (this.value == 'Bestellnummer eingeben...') {this.value = '';}"
+                  />
             
 		<input type="button" id="..." value="Suchen" onclick="...()" /><br>           
             Bestellungnummer: 6464644664      <br>Bestelldatum:  28.April 2013
@@ -105,19 +109,27 @@ Bestellung durch:  Naturgrün GmbH</br>
             
      <b>Bestellung bearbeiten</b>
 	  <div class=lagerBodyBestellungBearbeiten>
-			<input type="text" id="..." size="50" value="Bestellnummer eingeben..."  />
+			<input type="text" id="..." size="50" value="Bestellnummer eingeben..." 
+            onblur="if (this.value == '') {this.value = 'Bestellnummer eingeben...';}"
+				onfocus="if (this.value == 'Bestellnummer eingeben...') {this.value = '';}" />
             
 			<input type="button" id="..." value="Suchen" onclick="...()" /><br>           
             Bestellungnummer: 6464644664      <br>Bestelldatum:  28.April 2013
 Bestellung durch:  Naturgrün GmbH</br>
 
 	<input type="button" id="..." value="Bestellung korrigieren" onclick="...()" />
-   <br>     Bestellnummer: <input type="text" id="..." size="50" value="..."  />  
+   <br>     Bestellnummer: <input type="text" id="..." size="50" value="..." 
+   onblur="if (this.value == '') {this.value = '...';}"
+				onfocus="if (this.value == '...') {this.value = '';}" />  
    
    
-     <br>     Lieferanschrift: <input type="text" id="..." size="50" value="..."  />
+     <br>     Lieferanschrift: <input type="text" id="..." size="50" value="..." 
+     onblur="if (this.value == '') {this.value = '...';}"
+				onfocus="if (this.value == '...') {this.value = '';}" />
      
-       <br>     Artikelliste: <input type="text" id="..." size="50" value="..."  />  
+       <br>     Artikelliste: <input type="text" id="..." size="50" value="..."  
+       onblur="if (this.value == '') {this.value = '...';}"
+				onfocus="if (this.value == '...') {this.value = '';}" />  
        <br>
        <input type="button" id="..." value="Änderung speichern" onclick="...()" />
    <br>     
@@ -127,7 +139,9 @@ Bestellung durch:  Naturgrün GmbH</br>
         
  <b>Paketschein drucken</b>
 	  <div class=lagerBodyPaketscheinDrucken>
-			<input type="text" id="..." size="50" value="Paketnummer eingeben..."  />
+			<input type="text" id="..." size="50" value="Paketnummer eingeben..." 
+            onblur="if (this.value == '') {this.value = 'Paketnummer eingeben...';}"
+				onfocus="if (this.value == 'Paketnummer eingeben...') {this.value = '';}" />
             
 			<input type="button" id="..." value="Suchen" onclick="...()" /><br>           
             Paketnummer: 229293832882</br>
@@ -138,7 +152,9 @@ Bestellung durch:  Naturgrün GmbH</br>
             
 <b>Lieferschein drucken</b>
 		<div class=lagerBodyLieferscheinDrucken>
-			<input type="text" id="..." size="50" value="Lieferscheinnummer eingeben..."  />
+			<input type="text" id="..." size="50" value="Lieferscheinnummer eingeben..." 
+            onblur="if (this.value == '') {this.value = 'Lieferscheinnummer eingeben...';}"
+				onfocus="if (this.value == 'Lieferscheinnummer eingeben...') {this.value = '';}" />
             
 			<input type="button" id="..." value="Suchen" onclick="...()" /><br>           
             Lieferscheinnummer: 222444939382
@@ -148,7 +164,9 @@ Bestellung durch:  Naturgrün GmbH</br>
             
 <b>Lagerbestand korrigieren</b>
 		<div class=lagerBodyLagerbestandKorrigieren>
-			<input type="text" id="..." size="50" value="Produktnummer eingeben..."  />
+			<input type="text" id="..." size="50" value="Produktnummer eingeben..." 
+            onblur="if (this.value == '') {this.value = 'Produktnummer eingeben...';}"
+				onfocus="if (this.value == 'Produktnummer eingeben...') {this.value = '';}" />
             
 			<input type="button" id="..." value="Suchen" onclick="...()" /><br>           
             <div class=lagerBestellungTabelleElement>
@@ -176,7 +194,9 @@ Bestellung durch:  Naturgrün GmbH</br>
 
 <b>Rechnung drucken</b>
 		<div class=lagerBodyRechungDrucken>
-			<input type="text" id="..." size="50" value="Rechungsnummer eingeben..."  />
+			<input type="text" id="..." size="50" value="Rechnungsnummer eingeben..." 
+            onblur="if (this.value == '') {this.value = 'Rechnungsnummer eingeben...';}"
+				onfocus="if (this.value == 'Rechnungsnummer eingeben...') {this.value = '';}"  />
             
 			<input type="button" id="..." value="Suchen" onclick="...()" /><br>           
             Rechnungsnummer: 222444939382
@@ -187,7 +207,9 @@ Bestellung durch:  Naturgrün GmbH</br>
 
 <b>Warenausgang melden</b>
 		<div class=lagerBodyWarenausgangMelden>
-			<input type="text" id="..." size="50" value="Bestellnummer eingeben..."  />
+			<input type="text" id="..." size="50" value="Bestellnummer eingeben..." 
+            onblur="if (this.value == '') {this.value = 'Bestellnummer eingeben...';}"
+				onfocus="if (this.value == 'Bestellnummer eingeben...') {this.value = '';}" />
             
 			<input type="button" id="..." value="Suchen" onclick="...()" /><br>           
             Bestellung: 222444939382
