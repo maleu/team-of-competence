@@ -3,25 +3,39 @@
 		ini_set ("display_errors", "1");
 		error_reporting(E_ALL);
 	?>
+    <link rel="stylesheet" type="text/css" href="Lagereinkauf.css">
+    
 <div class=lagerNav>
 	<div class=lagerNavElement>
 		Startseite
+        
 	</div>
+    
 	<div class=lagerNavElement>
 		Kalender
+        
 	</div>
+    
 	<div class=lagerNavElement>
 		Posteingang
-	</div>
-	<div class=lagerNavElement>
+	
+    </div>
+	
+    <div class=lagerNavElement>
 		Bestellung <br />aufnehmen
-	</div>
-	<div class=lagerNavElement>
+	
+    </div>
+	
+    <div class=lagerNavElement>
 		Auftragsbest&auml;tigung <br />digitalisieren
-	</div>
-	<div class=lagerNavElement>
+	
+    </div>
+	
+    <div class=lagerNavElement>
 		Lieferschein <br />digitalisieren
-	</div>
+	
+    </div>
+
 </div>
 
 
@@ -30,24 +44,44 @@
 		<div class=lagerHeaderLinks>
 			<div class=lagerHeaderElement>
 				Speichern
+
 			</div>
+
 			<div class=lagerHeaderElement>
 				Neu
+
 			</div>
+
 			<div class=lagerHeaderElement>
 				L&ouml;schen
+
 			</div>
 		</div>
+
 		<div class=lagerHeaderRechts>
 			<div class=lagerHeaderElement>
 				Drucken
+
 			</div>
+
 			<div class=lagerHeaderElement>
 				Hilfe
+
 			</div>
+
 		</div>
-	</div></div>
+	</div>
+    
 	<div class=Body>
+    
+    
+    
+    
+    
+    
+    
+    
+    
 		<b>Bestellstatus abrufen</b>
 		<div class=lagerBodyBestellungStatus>
 			<input type="text" id="lagerProduktnummer" size="50" value="Bestellnummer eingeben..."  />
@@ -159,7 +193,7 @@ Bestellung durch:  Naturgrün GmbH</br>
 </div>
   </div>
             
-            
-            
+     
+          
 			
 			
