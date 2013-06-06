@@ -100,6 +100,7 @@
 Bestellung durch:  Naturgrün GmbH</br>
 
 	<input type="button" id="..." value="Bestellung stornieren" onclick="...()" /><br>         
+
 </div>
             
      <b>Bestellung bearbeiten</b>
@@ -120,6 +121,7 @@ Bestellung durch:  Naturgrün GmbH</br>
        <br>
        <input type="button" id="..." value="Änderung speichern" onclick="...()" />
    <br>     
+
 </div>       
         
         
@@ -131,6 +133,7 @@ Bestellung durch:  Naturgrün GmbH</br>
             Paketnummer: 229293832882</br>
 
 	<input type="button" id="..." value="Paketschein drucken" onclick="...()" /><br>         
+
 </div>    
             
 <b>Lieferschein drucken</b>
@@ -150,21 +153,21 @@ Bestellung durch:  Naturgrün GmbH</br>
 			<input type="button" id="..." value="Suchen" onclick="...()" /><br>           
             <div class=lagerBestellungTabelleElement>
 					Produktnummer
-				</div>
+</div>
 				<div class=lagerBestellungTabelleElement>
 					Produktbezeichnung
-				</div>
+</div>
 				
 				<div class=lagerBestellungTabelleElement>
 					Menge
-				</div>
+</div>
 				
 			
 			<div class=lagerBestellungTabelleBody>
 				wird ersetzt.
-			</div>
+</div>
 			
-			<b>
+			
 
 	<input type="button" id="..." value="Änderung speichern" onclick="...()" /><br>         
 </div>
