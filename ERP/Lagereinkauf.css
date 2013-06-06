@@ -52,3 +52,65 @@
 .lagerBestellungTabelleZeile{
 
 }
+
+
+.lagerBodyStornierenStatus{
+	float:left;
+	border: 2px solid;
+	margin: 5px 0px 0px 0px;
+	width: 810px;
+	padding: 10px;
+}.lagerBodyBestellungStatus{
+	float:left;
+	border: 2px solid;
+	margin: 5px 0px 0px 0px;
+	width: 810px;
+	padding: 10px;
+}.lagerBodyBestellungBearbeiten{
+	float:left;
+	border: 2px solid;
+	margin: 5px 0px 0px 0px;
+	width: 810px;
+	padding: 10px;
+}
+.wrapper{
+	border:2px solid;
+	margin: 5px 0px 0px 0px;
+	width: 810px;
+	
+	}
+.lagerBodyPaketscheinDrucken{
+	float:left;
+	border: 2px solid;
+	margin: 5px 0px 0px 0px;
+	width: 400px;
+}.lagerBodyLieferscheinDrucken{
+	float:left;
+	border: 2px solid;
+	margin: 5px 0px 0px 0px;
+	width: 400px;
+}.lagerBodyLagerbestandKorrigieren{
+	float:left;
+	border: 2px solid;
+	margin: 5px 0px 0px 0px;
+	width: 810px;
+	padding: 10px;
+}
+.wrapper1{
+	border:2px;
+	margin: 5px 0px 0px 0px;
+	width:810px;
+	}
+.lagerBodyRechungDrucken{
+	float:left;
+	border: 2px solid;
+	margin: 5px 0px 0px 0px;
+	width: 393px;
+
+}.lagerBodyWarenausgangMelden{
+	float:left;
+	border: 2px solid;
+	margin: 5px 0px 0px 0px;
+	width: 393px;
+	
+}
