@@ -25,14 +25,21 @@ if (isset( $_POST['P_nachname'] ))
     $vorname    = $_POST['P_vorname'];
     $nachname = $_POST['P_nachname'];
 	$firma = $_POST['P_firma'];
+        $Strasse = $_POST['P_Strasse'];
+        $Postleitzahl = $_POST['P_PLZ'];
+        $Ort = $_POST['P_Ort'];
+        $Telefonnummer = $_POST['P_Telefon'];
+        $Email = $_POST['P_Email'];
+        $KundenID = $_POST['P_Kunden'];
+        $MitarbeiterID = $_POST['P_Mitarbeiter'];
 	echo($nachname);
  
 	include_once 'db_connect.php';
     if (mysqli_connect_errno() == 0)
     {
-        $sql = 'INSERT INTO `Kunden` (`KundenID`, `MitarbeiterID`, `Firma`, `Strasse`, `PLZ`, `Ort`, `vorname`, `nachname`, `Telefon`, `Email`) VALUES (?, ?, ?)';
+        $sql = 'INSERT INTO `Kunden` (`vorname`, `nachname`, `firma`, `KundenID`, `MitarbeiterID`,`Strasse`, `PLZ`, `Ort`, `Telefon`, `Email`) VALUES (?, ?, ?)';
         $insert = $db->prepare( $sql );
-        $insert->bind_param( 'sss', $vorname, $nachname, $firma );
+        $insert->bind_param( 'sss', $vorname, $nachname, $firma, $Strasse, 'Postleitzahl', $Ort, 'Telefonnummer', $Email, 'KundenID', 'MitarbeiterID'  );
         $insert->execute();
 
         if ($insert->affected_rows == 1)
