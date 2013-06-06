@@ -162,7 +162,4 @@ Bestellung durch:  Naturgrün GmbH</br>
             
             
 			
-			</div>
-		</div>
-	</div>
-</div>
+			
