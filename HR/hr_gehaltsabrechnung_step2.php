@@ -1,8 +1,0 @@
-<?php
-
-//Akte bereits vorhanden?
-
-
-
-
-?>
