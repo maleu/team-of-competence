@@ -1,5 +1,5 @@
 <?php
-
+if($id){
 include_once '../db_connect.php';
 if (mysqli_connect_errno() ==0 )
 { ?>
@@ -37,4 +37,5 @@ while ($result->fetch()){
 	else
 	{echo("<div id='dbcon'>No DB COnnection possible at all, error is ".mysqli_connect_errno()." : ".mysqli_connect_error()."</div><!--end dbcon -->"); }
 	//$db->close();
+	} else echo "<br /> Es wurde noch kein Kunde gewählt.";	
 ?>
