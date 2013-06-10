@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Description of wareingangsrechnungLieferantEditieren
+ * Description of versandtStatusIntern
  *
  * @author Martin Koltermann
  */
