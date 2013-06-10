@@ -1,7 +1,5 @@
 <div id='crm_wrap'>
-	<?php
-	echo 'TEST: ' . $id;
-	?>
+	<?php echo 'TEST: ' . $id; ?>
 	<div id='crmControls'>
 		<button class='crmNav' name="newClient" onclick="crm_createClient()" id="crm_newClient" value="new">
 			Neuer Kunde
@@ -19,45 +17,39 @@
 	</div>
 
 	<?php
-if (isset( $_POST['P_nachname'] ))
-{
-    if (get_magic_quotes_gpc()) { $_POST = array_map( 'stripslashes', $_POST ); }
-    $vorname    = $_POST['P_vorname'];
-    $nachname = $_POST['P_nachname'];
-	$firma = $_POST['P_firma'];
-        $Strasse = $_POST['P_Strasse'];
-        $Postleitzahl = $_POST['P_PLZ'];
-        $Ort = $_POST['P_Ort'];
-        $Telefonnummer = $_POST['P_Telefon'];
-        $Email = $_POST['P_Email'];
-        $KundenID = $_POST['P_Kunden'];
-        $MitarbeiterID = $_POST['P_Mitarbeiter'];
-	echo($nachname);
- 
-	include_once 'db_connect.php';
-    if (mysqli_connect_errno() == 0)
-    {
-        $sql = 'INSERT INTO `Kunden` (`vorname`, `nachname`, `firma`, `KundenID`, `MitarbeiterID`,`Strasse`, `PLZ`, `Ort`, `Telefon`, `Email`) VALUES (?, ?, ?)';
-        $insert = $db->prepare( $sql );
-        $insert->bind_param( 'sss', $vorname, $nachname, $firma, $Strasse, 'Postleitzahl', $Ort, 'Telefonnummer', $Email, 'KundenID', 'MitarbeiterID'  );
-        $insert->execute();
+	if (isset($_POST['P_nachname'])) {
+		if (get_magic_quotes_gpc()) { $_POST = array_map('stripslashes', $_POST);
+		}
+		$vorname = $_POST['P_vorname'];
+		$nachname = $_POST['P_nachname'];
+		$firma = $_POST['P_firma'];
+		$Strasse = $_POST['P_strasse'];
+		$Postleitzahl = $_POST['P_plz'];
+		$Ort = $_POST['P_ort'];
+		$Telefonnummer = $_POST['P_tel'];
+		$Email = $_POST['P_email'];
+		$KundenID = $_POST['P_kunden'];
+		$MitarbeiterID = $_POST['P_mitarbeiter'];
+		echo($vorname . " " . $nachname. $Telefonnummer);
 
-        if ($insert->affected_rows == 1)
-        {
-            echo('Neukunde '.$vorname.' '.$nachname.' wurde erfolgreich erstellt :)');
-        }
-        else
-        {
-            echo 'Der Kunde konnte nicht erstellt werden...';
-        }
-    }
-    else
-    {
-        echo("<div id='dbcon'>No DB COnnection possible at all, error is ".mysqli_connect_errno()." : ".mysqli_connect_error()."</div><!--end dbcon -->"); }
-	//$db->close();
-    } else {
-        echo "Es wurde kein Formular ausgefüllt";
-    }
- 
+		include_once 'db_connect.php';
+		if (mysqli_connect_errno() == 0) {
+			$sql = 'INSERT INTO `Kunden` (`Vorname`, `Nachname`, `Firma`, `KundenID`, `MitarbeiterID`,`Strasse`, `PLZ`, `Ort`, `Telefon`, `Email`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
+			$insert = $db -> prepare($sql);
+			$insert -> bind_param('sssiisisis', $vorname, $nachname, $firma, $KundenID, $MitarbeiterID, $Strasse, $Postleitzahl, $Ort, $Telefonnummer, $Email);
+			$insert -> execute();
+
+			if ($insert -> affected_rows == 1) {
+				echo('Neukunde ' . $vorname . ' ' . $nachname . ' wurde erfolgreich erstellt :)');
+			} else {
+				echo 'Der Kunde konnte nicht erstellt werden...'.mysqli_error($db);
+			}
+		} else {
+			echo("<div id='dbcon'>No DB COnnection possible at all, error is " . mysqli_connect_errno() . " : " . mysqli_connect_error() . "</div><!--end dbcon -->");
+		}
+		//$db->close();
+	} else {
+		echo "Es wurde kein Formular ausgefüllt";
+	}
 ?>
 </div>
