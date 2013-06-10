@@ -28,4 +28,5 @@
         </tr>
         </table>
 
-<a class="btn" href="javascript:$.growlUI('Growl Notification', 'Have a nice day!');">Abrechnen</a>
+<a class="btn" href="javascript:$.growlUI('Lohn-/Gehalt wurde geändert!');">Abrechnen</a>
+<p>Hinweis: Hierdurch wird automatisch eine Meldung versandt!</p>
