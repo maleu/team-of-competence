@@ -1,20 +1,30 @@
+<?php
+$prodNummer = $_POST['prodNummer'];
+$prodName = $_POST['prodName'];
+$nettoPreis = $_POST['nettoPreis'];
+$menge = $_POST['menge'];
+$lieferant = $_POST['lieferant'];
+
+echo '
 <div class=lagerBestellungTabelleZeile>
 	<div class=lagerBestellungTabelleElement>
-		PositionVal
+		'.$prodNummer.'
 	</div>
 	<div class=lagerBestellungTabelleElement>
-		ProduktnummerVal
+		'.$prodName.'
 	</div>
 	<div class=lagerBestellungTabelleElement>
-		ProduktbezeichnungVal
+		'.$nettoPreis.'
 	</div>
 	<div class=lagerBestellungTabelleElement>
-		NettopreisVal
+		'.$menge.'
 	</div>
 	<div class=lagerBestellungTabelleElement>
-		MengeVal
+		'.$lieferant.'
 	</div>
 	<div class=lagerBestellungTabelleElement>
-		LieferantVal
+		'.$prodNummer.'
 	</div>
 </div>
+';
+?>
