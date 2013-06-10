@@ -97,6 +97,8 @@
                                 <li><a href="javascript:loadErpLagereinkauf();">Lagereinkauf</a></li>
                                 <li><a href="javascript:loadPage('FIBU/index_personalmanagement.php', 'content');">Personalmanagement</a></li>
                                 <li><a href="javascript:loadPage('FIBU/index_finanzbuchhaltung.php', 'content');">Finanzbuchhaltung</a></li>
+                                
+                                <li><a href="javascript:loadPage('ERP/Versandt/index_versandt.php', 'content');">Versand</a></li>
                             </ul>
                         </div>
                     </div>
