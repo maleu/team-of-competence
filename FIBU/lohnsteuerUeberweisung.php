@@ -38,6 +38,5 @@
 
 
 
-<button onclick="$.growlUI('Growl Notification', 'Have a nice day!');">Überweisen</button>
-
+<a class="btn" href="javascript:$.growlUI('Growl Notification', 'Have a nice day!');">Überweisen</a>
 <p>Hinweis: Hierdurch wird automatisch eine Meldung versandt!</p>
