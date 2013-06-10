@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Description of paketTracking
+ * Descriptiosn of paketTracking
  *
  * @author Martin Leuthold
  */

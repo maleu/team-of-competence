@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Description of adressabgleich
+ * Descriptiona of adressabgleich
  *
  * @author Martin Koltermann
  */

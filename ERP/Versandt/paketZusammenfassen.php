@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Description of paketZusammenfassen
+ * Descriptions of paketZusammenfassen
  *
  * @author Martin Koltermann
  */

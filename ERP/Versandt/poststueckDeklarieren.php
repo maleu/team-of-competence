@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Description of poststueckDeklarieren
+ * Descriptions of poststueckDeklarieren
  *
  * @author Martin Koltermann
  */
