@@ -20,4 +20,5 @@
 </table>
 
 
-<a class="btn" href="javascript:$.growlUI('Meldung erfolgreich versandt');">Abrechnen</a>
+<a class="btn" href="javascript:$.growlUI('Meldung erfolgreich versandt!');">Abrechnen</a>
+<p>Hinweis: Hierdurch wird automatisch eine Meldung versandt!</p>

@@ -38,5 +38,5 @@
     </tr>
 </table>
 
-<a class="btn" href="javascript:$.growlUI('Growl Notification', 'Have a nice day!');">Überweisen</a>
+<a class="btn" href="javascript:$.growlUI('Meldung wurde erfolgreich versandt!');">Überweisen</a>
 <p>Hinweis: Hierdurch wird automatisch eine Meldung versandt!</p>
