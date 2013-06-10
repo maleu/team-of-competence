@@ -42,4 +42,4 @@
 <p>
 
 
-<a class="btn" href="javascript:$.growlUI('Poststück wurde deklariert');">Deklarieren</a>
+<a class="btn" href="javascript:$.growlUI('Poststück wurde deklariert!');">Deklarieren</a>
