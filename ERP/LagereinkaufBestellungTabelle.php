@@ -1,17 +1,17 @@
 <div class=lagerBestellungTabelleZeile>
-	<div class=lagerBestellungTabelleHeaderElement>
+	<div class=lagerBestellungTabelleElement>
 		ProduktnummerVal
 	</div>
-	<div class=lagerBestellungTabelleHeaderElement>
+	<div class=lagerBestellungTabelleElement>
 		ProduktbezeichnungVal
 	</div>
-	<div class=lagerBestellungTabelleHeaderElement>
+	<div class=lagerBestellungTabelleElement>
 		NettopreisVal
 	</div>
-	<div class=lagerBestellungTabelleHeaderElement>
+	<div class=lagerBestellungTabelleElement>
 		MengeVal
 	</div>
-	<div class=lagerBestellungTabelleHeaderElement>
+	<div class=lagerBestellungTabelleElement>
 		LieferantVal
 	</div>
 </div>
