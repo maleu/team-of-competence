@@ -28,4 +28,4 @@
         </tr>
         </table>
 
-<button>Abrechnen</button>
+<button onclick="$.growlUI('Growl Notification', 'Have a nice day!');">Abrechnen</button>
