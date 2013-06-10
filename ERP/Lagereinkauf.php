@@ -16,17 +16,6 @@
 </div>
 <div class=lagerMain>
 	<div class=lagerHeader>
-		<div class=lagerHeaderLinks>
-			<div class=lagerHeaderElement>
-				Speichern
-			</div>
-			<div class=lagerHeaderElement>
-				Neu
-			</div>
-			<div class=lagerHeaderElement>
-				L&ouml;schen
-			</div>
-		</div>
 		<div class=lagerHeaderRechts>
 			<div class=lagerHeaderElement>
 				Drucken
@@ -42,46 +31,47 @@
 			<input type="text" id="lagerProduktnummer" size="50" value="Produktnummer eingeben..." 
 				onblur="if (this.value == '') {this.value = 'Produktnummer eingeben...';}"
 				onfocus="if (this.value == 'Produktnummer eingeben...') {this.value = '';}"/>
+			<input type="text" id="lagerProduktname" size="50" value="Produktnamen eingeben..." 
+				onblur="if (this.value == '') {this.value = 'Produktnamen eingeben...';}"
+				onfocus="if (this.value == 'Produktnamen eingeben...') {this.value = '';}"/>
 			<input type="button" id="lagerProduktnummerSuchen" value="Suchen" onclick="lagerProduktnummerSuchen()" />
 			<div class=lagerBestellungTabelleHeader>
-				<div class=lagerBestellungTabelleElement>
+				<div class=lagerBestellungTabelleHElement>
 					Produktnummer
 				</div>
-				<div class=lagerBestellungTabelleElement>
-					Produktbezeichnung
+				<div class=lagerBestellungTabelleHElement>
+					Produkt-<br />bezeichnung
 				</div>
-				<div class=lagerBestellungTabelleElement>
+				<div class=lagerBestellungTabelleHElement>
 					Nettopreis
 				</div>
-				<div class=lagerBestellungTabelleElement>
+				<div class=lagerBestellungTabelleHElement>
 					Menge
 				</div>
-				<div class=lagerBestellungTabelleElement>
+				<div class=lagerBestellungTabelleHElement>
 					Lieferant
 				</div>
 			</div>
 			<div id=lagerBestellungTabelleBody class=lagerBestellungTabelleBody>
 				wird ersetzt.
 			</div>
-			
+			<div style="clear:both;">
 			<b>Zusammenfassung</b>
+			</div>
 			<div class=lagerBestellungTabelleHeader>
-				<div class=lagerBestellungTabelleElement>
-					Position
-				</div>
-				<div class=lagerBestellungTabelleElement>
+				<div class=lagerBestellungTabelleHElement>
 					Produktnummer
 				</div>
-				<div class=lagerBestellungTabelleElement>
-					Produktbezeichnung
+				<div class=lagerBestellungTabelleHElement>
+					Produkt-<br />bezeichnung
 				</div>
-				<div class=lagerBestellungTabelleElement>
+				<div class=lagerBestellungTabelleHElement>
 					Nettopreis
 				</div>
-				<div class=lagerBestellungTabelleElement>
+				<div class=lagerBestellungTabelleHElement>
 					Menge
 				</div>
-				<div class=lagerBestellungTabelleElement>
+				<div class=lagerBestellungTabelleHElement>
 					Lieferant
 				</div>
 			</div>
