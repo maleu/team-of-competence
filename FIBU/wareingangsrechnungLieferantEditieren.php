@@ -38,6 +38,6 @@
     </tr>
 </table>
 
-<button>Überweisen</button>
+<button onclick="$.growlUI('Growl Notification', 'Have a nice day!');">Überweisen</button>
 
 <p>Hinweis: Hierdurch wird automatisch eine Meldung versandt!</p>

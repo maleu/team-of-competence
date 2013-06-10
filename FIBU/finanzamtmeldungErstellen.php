@@ -20,4 +20,4 @@
 </table>
 <p>Hinweis: Mehrfachauswahl mit der STRG Taste möglich!</p>
 
-<button>Abrechnen</button>
+<button onclick="$.growlUI('Growl Notification', 'Have a nice day!');">Abrechnen</button>
