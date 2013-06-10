@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Description of frachtbriefErstellen
+ * Descriptions of frachtbriefErstellen
  *
  * @author Martin Koltermann
  */

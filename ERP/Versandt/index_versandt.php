@@ -1,6 +1,6 @@
 <?php
 /**
- * Description of index_versandt
+ * Descriptions of index_versandt
  *
  * @author Martin Koltermann
  */
