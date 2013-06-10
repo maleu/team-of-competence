@@ -1,30 +1,37 @@
 <?php
-    $id = $POST_id;
-//include_once '../db_connect.php';
+if($id){
+include_once '../db_connect.php';
 if (mysqli_connect_errno() ==0 )
 { ?>
 <div id='kontaktverlauf'>
 	<table id="table_kontaktverlauf">
 		<tbody>
 			<tr class="toprow">
-				<td>KundenID</td>
-				<td>MitarbeiterID</td>
-				<td>Seit</td>
+				<td>Kontakt #</td>
+				<td>Art</td>
+				<td>Mitarbeiter</td>
+				<td>Datum</td>
+				<td>Inhalt</td>
 			</tr>
-			<?php /*
-$sql = "SELECT * FROM kontaktverlauf WHERE id=".$KundenID;
+			<?php 
+$sql = "SELECT `Datum` , `Kontaktart` , `Inhalt` , `Vorname` , `Nachname` , `KontaktID`
+FROM kontaktverlauf AS kontakt
+JOIN Mitarbeiter AS mitarbeiter ON kontakt.MitarbeiterID = mitarbeiter.MitarbeiterID
+WHERE KundenID =".$id;
 $result=$db->prepare($sql);
 $result->execute();
-$result->bind_result($KundenID, $MitarbeiterID, $Seit);
-while ($result->fetch()){ */
+$result->bind_result($datum, $kontaktart, $inhalt, $vorname, $nachname, $kontaktID);
+echo mysqli_error($db);
+while ($result->fetch()){ 
 			?>
 			<tr>
-				<td><?php echo '$KundenID' ?></td>
-				<td><?php echo '$MitarbeiterID' ?></td>
-				<td><?php echo '$Seit' ?></td>
-
+				<td><?php echo $kontaktID ?></td>
+				<td><?php echo $kontaktart ?></td>
+				<td><?php echo($vorname." ".$nachname) ?></td>
+				<td><?php echo $datum ?></td>
+				<td><?php echo $inhalt ?></td>
 			</tr>
-			<?php // }   end while ?> 
+			<?php }    //end while ?> 
 		</tbody>
 	</table>
 </div>
@@ -33,4 +40,5 @@ while ($result->fetch()){ */
 	else
 	{echo("<div id='dbcon'>No DB COnnection possible at all, error is ".mysqli_connect_errno()." : ".mysqli_connect_error()."</div><!--end dbcon -->"); }
 	//$db->close();
+	} // end if id set
 ?>
