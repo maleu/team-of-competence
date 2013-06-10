@@ -86,11 +86,10 @@ function crm_createClientSubmit(){
 	firma = document.getElementById('crm_input_Firma').value;
 	strasse = document.getElementById('crm_input_Strasse').value;
 	postleitzahl = document.getElementById('crm_input_PLZ').value;
-	Ort = document.getElementById('crm_input_Ort').value;
+	ort = document.getElementById('crm_input_Ort').value;
 	tel = document.getElementById('crm_input_Telefon').value;
-	Email = document.getElementById('crm_input_Email').value;
-        KundenID = document.getElementById('crm_input_Kunden').value;
-        MitarbeiterID = document.getElementById('crm_input_Mitarbeiter').value;
+	email = document.getElementById('crm_input_Email').value;
+    mitarbeiterID = document.getElementById('crm_input_Mitarbeiter').value;
 
 	$.ajax({
 	type: "POST",
@@ -99,7 +98,7 @@ function crm_createClientSubmit(){
 		$('#content').html(loadingImageTag);
 	},
 	data: {					
-		P_vorname: vorname, P_nachname: nachname, P_firma: firma, P_Strasse: strasse, P_PLZ: postleitzahl, P_Ort: ort, P_tel: tel, P_email: email, P_Kunden: KundenID, P_Mitarbeiter: MitarbeiterID 
+		P_vorname: vorname, P_nachname: nachname, P_firma: firma, P_strasse: strasse, P_plz: postleitzahl, P_ort: ort, P_tel: tel, P_email: email, P_mitarbeiter: mitarbeiterID 
               
 	}
 }).done(function( msg ) {

@@ -8,7 +8,6 @@
 		Ort: <input name="P_Ort" type="text" class='crmNeukundeForm' id="crm_input_Ort" maxlength="20" />
 		Telefonnummer: <input name="P_Telefon" type="text" class='crmNeukundeForm' id="crm_input_Telefon" maxlength="20" />
 		Email: <input name="P_Email" type="text" class='crmNeukundeForm' id="crm_input_Email" maxlength="20" />
-                KundenID: <input name="P_Kunden" type="text" class='crmNeukundeForm' id="crm_input_Kunden" maxlength="20" />
 		MitarbeiterID: <input name="P_Mitarbeiter" type="text" class='crmNeukundeForm' id="crm_input_Mitarbeiter" maxlength="20" />
 		<button type="button" id='crm_createClientButton' onclick="crm_createClientSubmit()" class='crmNeukundeForm'>erstellen</button>
 	</form>
