@@ -13,15 +13,6 @@
 	<div class=lagerNavElement>
 		Posteingang
 	</div>
-	<div class=lagerNavElement>
-		Bestellung <br />aufnehmen
-	</div>
-	<div class=lagerNavElement>
-		Auftragsbest&auml;tigung <br />digitalisieren
-	</div>
-	<div class=lagerNavElement>
-		Lieferschein <br />digitalisieren
-	</div>
 </div>
 <div class=lagerMain>
 	<div class=lagerHeader>
@@ -69,7 +60,7 @@
 					Lieferant
 				</div>
 			</div>
-			<div class=lagerBestellungTabelleBody>
+			<div id=lagerBestellungTabelleBody class=lagerBestellungTabelleBody>
 				wird ersetzt.
 			</div>
 			
@@ -94,7 +85,7 @@
 					Lieferant
 				</div>
 			</div>
-			<div class=lagerZusammenfassungTabelleBody>
+			<div id=lagerZusammenfassungTabelleBody class=lagerZusammenfassungTabelleBody>
 				wird ersetzt.
 			</div>
 			<div id="lagerBestellungAbschicken">
