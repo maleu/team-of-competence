@@ -98,9 +98,9 @@ function calendar($cyear, $admin=0) {
       <td>&nbsp;</td>
       <td colspan="31">
       <div style="margin-left: 220px; float: left; font-weight: bold;">
-          <a href="' . basename($_SERVER['PHP_SELF']) . '?y=' . $ym . '"><img border=0 src=larrow.gif></a>
+          <a href="' . basename($_SERVER['PHP_SELF']) . '?y=' . $ym . '"><img border=0 src=/HR/urlaub/larrow.gif></a>
               '.$lang['year'].' '.$cyear.'
-          <a href="' . basename($_SERVER['PHP_SELF']) . '?y=' . $yp . '"><img border=0 src=rarrow.gif></a>
+          <a href="' . basename($_SERVER['PHP_SELF']) . '?y=' . $yp . '"><img border=0 src=/HR/urlaub/rarrow.gif></a>
       </div>
   ');
 
