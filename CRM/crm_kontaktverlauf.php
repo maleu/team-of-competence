@@ -4,7 +4,7 @@ include_once '../db_connect.php';
 if (mysqli_connect_errno() ==0 )
 { ?>
 <div id='kontaktverlauf'>
-	<table id="table_kontaktverlauf">
+	<table id="table_kontaktverlauf"  border="1" cellspacing="2" cellpadding="2">
 		<tbody>
 			<tr class="toprow">
 				<td>Kontakt #</td>

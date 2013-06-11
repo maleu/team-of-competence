@@ -4,28 +4,26 @@ include_once '../db_connect.php';
 if (mysqli_connect_errno() ==0 )
 { ?>
 <div id='kaufhistorie'>
-	<table id="table_kaufhistorie">
+	<table class="tablesorter" id="table_kaufhistorie" border="1" cellspacing="2" cellpadding="2">
 		<tbody>
 			<tr class="toprow">
-				<td>MitarbeiterID</td>
-				<td>ArtikelID</td>
+				<td>Name</td>
+				<td>Preis</td>
 				<td>Verkaufsdatum</td>
                 <td>Kanal</td>
 			</tr>
 	<?php 
-$sql = "SELECT KundenID, MitarbeiterID, Verkaufsdatum, Kanal, Name, Preis FROM Verkaufsliste AS Verkauf JOIN ArtikelTemp AS Artikel ON Verkauf.ArtikelID = Artikel.ArtikelID WHERE Verkauf.KundenID=".$id;
+$sql = "SELECT KundenID, MitarbeiterID, Verkaufsdatum, Kanal, Name, Verkaufspreis FROM Verkaufsliste AS Verkauf JOIN Artikel AS Artikel ON Verkauf.ArtikelID = Artikel.ArtikelID WHERE Verkauf.KundenID=".$id;
 $result=$db->prepare($sql);
 $result->execute();
 $result->bind_result($kundenID, $mitarbeiterID, $verkaufsdatum, $kanal, $name, $preis);
 while ($result->fetch()){
 			?>
 			<tr>
-				<td><?php echo $KundenID ?></td>
-				<td><?php echo $MitarbeiterID ?></td>
 				<td><?php echo $name ?></td>
 				<td><?php echo $preis ?></td>
-				<td><?php echo $Verkaufsdatum ?></td>
-                <td><?php echo $Kanal ?></td>
+				<td><?php echo $verkaufsdatum ?></td>
+                <td><?php echo $kanal ?></td>
 			</tr>
 			<?php } //end while 
 			?>

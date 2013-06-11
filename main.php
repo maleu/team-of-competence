@@ -17,6 +17,8 @@
         <script type="text/javascript" src="webroot/js/jquery-1.10.1.min.js"></script>
         <script type="text/javascript" src="webroot/js/jquery.blockUI.js"></script>
         <script type="text/javascript" src="webroot/js/icoloris.js"></script>
+        <script type="text/javascript" src="/tablesort/jquery-latest.js"></script>
+		<script type="text/javascript" src="/tablesort/jquery.tablesorter.js"></script>
         <script src="webroot/js/bootstrap.min.js"></script>
         <script type="text/javascript">
             $(document).ready(function() {
