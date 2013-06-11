@@ -11,7 +11,7 @@ url: self + "homepage.php",
 beforeSend: function() {	
 $('#content').html(loadingImageTag);
 },
-data: {	
+data: {
 }
 }).done(function( msg ) {
 $('#content').html(msg);
