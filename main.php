@@ -92,6 +92,7 @@
                     <div class="navbar-inner">
                         <div class="container">
                             <ul class="nav">
+                            	<?php if(isset($_GET['role'])){ //if role ?>
                                 <!-- Prüfe, wer sich angemeldet hat -->
                                 
                                 <!-- Admin oder Geschäftsführung -->
@@ -125,8 +126,7 @@
                                 <li><a href="javascript:loadCRMmain('1');">CRMain</a></li>
                                 <li><a href="javascript:loadErpLagereinkauf();">Lagereinkauf</a></li>
                                 <li><a href="javascript:loadPage('ERP/Versandt/index_versandt.php', 'content');">Versand</a></li>
-                                <?php } ?>
-  
+                                <?php } ?>   
                                 
                             </ul>
                         </div>
@@ -137,6 +137,8 @@
                 <div id="content" class=content>
                     Wird ersetzt.
                 </div>
+                <?php } else echo(" Sie sind nicht angemeldet, bitte über <a href='/'>Anmelden</a> fortfahren.")//end if no role 
+                                ?>
             </div>
         </div>
 
