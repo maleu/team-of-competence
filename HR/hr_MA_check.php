@@ -1,3 +1,24 @@
+<script language="text/javascript">
+    
+    function hr_MA_check_back() {
+	$.ajax({
+		type: "POST",
+		url: self + "hr_MA_eingabemaske.php",
+		beforeSend: function() {	
+			$('#lagerBestellungTabelleBody').html(loadingImageTag);
+		},
+		data: {		
+			produktnummer: produktnummer
+		}
+	}).done(function( msg ) {
+	alert(msg);
+		$('#lagerBestellungTabelleBody').html(msg);
+	});
+	
+    }
+    
+    </script>
+
 <?php
 
 $check_empty = true;
@@ -137,7 +158,7 @@ $check_empty = true;
         else {
             echo('Korrigieren Sie bitte die Eingaben.<br>');
             echo('<form>
-              <input type="button" value="Zurück" onClick="javascript:history.go(-1)" />
+              <input type="button" value="Zurück" onClick="hr_MA_check_back()" />
               </form> ');
         }
     } else {
