@@ -33,19 +33,10 @@ $('#content').html(msg);
 });	
 }
 
-function loadCRMtest(){
-$.ajax({
-type: "POST",
-url: self + "CRM/test.php",
-beforeSend: function() {	
-$('#content').html(loadingImageTag);
-},
-data: {	
-test: 23
-}
-}).done(function( msg ) {
-$('#content').html(msg);
-});	
+function loadUrlaub(){
+fenster = window.open("/HR/urlaub/urlaubskalender.php", "Urlaub", "width=690,height=420,resizable=no");
+ fenster.focus();
+ return false;
 }
 
 function crm_openClientbyID(){
