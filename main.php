@@ -9,6 +9,7 @@
         ?>
         <link href="index.css" rel="stylesheet" type="text/css">
         <link href="CRM/crm_style.css" rel="stylesheet" type="text/css">
+        <link href="dashboard_style.css" rel="stylesheet" type="text/css">
         <link href="ERP/Lagereinkauf.css" rel="stylesheet" type="text/css">
         <link href="webroot/css/bootstrap.min.css" rel="stylesheet" media="screen">
         <!--<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
