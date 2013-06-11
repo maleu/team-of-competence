@@ -23,6 +23,13 @@
 		Passwort: <br />
 		<input type="password" name="loginPasswort" id="loginPasswort"><br />
 		<input type="submit" id="loginSubmit" value="Abschicken">
+                
+                <select name="role">
+                    <option value="hr">HR</option>
+                    <option value="fibu">FIBU</option>
+                    <option value="gf">GF</option>
+                    <option value="lager">Lager</option>
+                </select>
 	</div>
 	</form>
 </div>

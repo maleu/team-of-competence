@@ -25,7 +25,7 @@ if($count == 1){
 // Register $myusername, $mypassword and redirect to file "login_success.php"
 // session_register("benutzername");
 // session_register("passwort");
-header("location:main.php");
+header("location:main.php?role=".$_POST['role']);
 }
 else {
 echo "<span style='background-color:red'>Wrong Username or Password</span>
