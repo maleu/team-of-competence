@@ -34,6 +34,9 @@ while ($result->fetch()){
 			<?php }    //end while ?> 
 		</tbody>
 	</table>
+		<button class='crmNav' name="newContact" onclick="crm_createContact()" id="crm_newContact" value="new">
+			Kontakt eintragen
+		</button>
 </div>
 <?php
 	} // end if no error
