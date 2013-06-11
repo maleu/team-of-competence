@@ -1,8 +1,11 @@
 <html>
-    <head></head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    </head>
     
     <body>
         <form action="hr_MA_check.php" method="POST">
+            <!-- SV-Nummer prüfen -->
             <input name="Vorname" type="text">    Vorname</input><br><br>
             <input name="Nachname" type="text">    Nachname</input><br><br>
             <input name="Geburtsdatum" type="datetime-local">    Geburtsdatum (YYYY-MM-DD Bsp: 1987-05-10)</input><br><br>
@@ -10,7 +13,7 @@
             <input name="PLZ" type="number">    PLZ</input><br><br>
             <input name="Ort" type="text">    Ort</input><br><br>
             <input name="Benutzername">    Benutzername</input><br><br>
-            <input name="Passwort">    Temporaeres Passwort</input><br><br>
+            <input name="Passwort">    Temporäres Passwort</input><br><br>
             
             <input name="Kontonr" type="number">Kontonr</input><br><br>
             <input name="BLZ" type="number">Bankleitzahl</input><br><br>

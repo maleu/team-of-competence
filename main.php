@@ -1,6 +1,7 @@
 <html>
     <head>
         <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+        <title>iColoris - Website</title>
         <?php
         include("nav.js");
         ini_set("display_errors", "1");
@@ -91,12 +92,42 @@
                     <div class="navbar-inner">
                         <div class="container">
                             <ul class="nav">
+                                <!-- Prüfe, wer sich angemeldet hat -->
+                                
+                                <!-- Admin oder Geschäftsführung -->
+                                <?php if($_GET['role'] == "admin" || $_GET['role'] == "gf"){?>
+                                <!-- Hier wird wahrscheinlich das Dashboard angezeigt: -->
                                 <li><a href="javascript:loadHomepage();">Startseite</a></li>
-                                <li><a href="javascript:loadCRMmain('1');">CRMain</a></li>
-                                <li><a href="javascript:loadCRMtest();">CRMtest</a></li>
-                                <li><a href="javascript:loadErpLagereinkauf();">Lagereinkauf</a></li>
+                                <!-- Alle sonstigen Seiten -->
+                                <li><a href="javascript:loadCRMtest();">Urlaub</a></li>
                                 <li><a href="javascript:loadPage('FIBU/index_personalmanagement.php', 'content');">Personalmanagement</a></li>
+                                <li><a href="javascript:loadCRMmain('1');">CRMain</a></li>
+                                <li><a href="javascript:loadErpLagereinkauf();">Lagereinkauf</a></li>
+                                <li><a href="javascript:loadPage('ERP/Versandt/index_versandt.php', 'content');">Versand</a></li>
+                                    
+                                    <?php } ?>
+                                <!-- FiBu -->
+                                <?php if($_GET['role'] == "fibu") {?> 
+                                <li><a href="javascript:loadHomepage();">Startseite</a></li>                             
+                                <li><a href="javascript:loadCRMtest();">Urlaub</a></li>
                                 <li><a href="javascript:loadPage('FIBU/index_finanzbuchhaltung.php', 'content');">Finanzbuchhaltung</a></li>
+                                    <?php } ?>
+                                <!-- HR -->
+                                <?php if($_GET['role'] == "hr") {?> 
+                                <li><a href="javascript:loadHomepage();">Startseite</a></li>
+                                <li><a href="javascript:loadCRMtest();">Urlaub</a></li> 
+                                <li><a href="javascript:loadPage('FIBU/index_personalmanagement.php', 'content');">Personalmanagement</a></li>
+                                <?php } ?>
+                                <!-- Lager -->
+                                <?php if($_GET['role'] == "lager") {?> 
+                                <li><a href="javascript:loadHomepage();">Startseite</a></li>
+                                <li><a href="javascript:loadCRMtest();">Urlaub</a></li> 
+                                <li><a href="javascript:loadCRMmain('1');">CRMain</a></li>
+                                <li><a href="javascript:loadErpLagereinkauf();">Lagereinkauf</a></li>
+                                <li><a href="javascript:loadPage('ERP/Versandt/index_versandt.php', 'content');">Versand</a></li>
+                                <?php } ?>
+  
+                                
                             </ul>
                         </div>
                     </div>

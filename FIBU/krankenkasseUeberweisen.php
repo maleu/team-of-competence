@@ -6,7 +6,7 @@
  * @author Martin Leuthold
  */
 ?>
-<h1>Gehaltsabrechnung erstellen</h1>
+<h1>Krankenkassenüberweisung</h1>
 <p>Bitte geben Sie die Mitarbeiter ID oder den Namen des Mitarbeiter ein.</p>
 
 <table>
@@ -31,6 +31,5 @@
     </tr>
 </table>
 
-<a class="btn" href="javascript:$.growlUI('Growl Notification', 'Have a nice day!');">Überweisen</a>
-
+<a class="btn" href="javascript:$.growlUI('Betrag wurde angewiesen!');">Überweisen</a>
 <p>Hinweis: Hierdurch wird automatisch eine Meldung versandt!</p>
