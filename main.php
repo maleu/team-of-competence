@@ -6,6 +6,7 @@
         include("nav.js");
         ini_set("display_errors", "1");
         error_reporting(E_ALL);
+		$role=$_GET['role'];
         ?>
         <link href="index.css" rel="stylesheet" type="text/css">
         <link href="CRM/crm_style.css" rel="stylesheet" type="text/css">
