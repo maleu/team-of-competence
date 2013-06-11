@@ -91,7 +91,7 @@
                     <div class="navbar-inner">
                         <div class="container">
                             <ul class="nav">
-                                <li><a href="javascript:loadHomepage();">Startseite</a></li>
+                                <?php if($_GET['role'] == "admin" || $_GET['role'] == "gf"){?><li><a href="javascript:loadHomepage();">Startseite</a></li><?php } ?>
                                 <li><a href="javascript:loadCRMmain('1');">CRMain</a></li>
                                 <li><a href="javascript:loadCRMtest();">CRMtest</a></li>
                                 <li><a href="javascript:loadErpLagereinkauf();">Lagereinkauf</a></li>

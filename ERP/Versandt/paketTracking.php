@@ -19,4 +19,4 @@
 
 <p>
 
-<input type="button" onclick="window.location.href = 'http://www.dhl.de/de/paket/information/sendungsverfolgung.html';" value="Trackinginformationen abrufen">
+<input type="button" class="btn" onclick="window.location.href = 'http://www.dhl.de/de/paket/information/sendungsverfolgung.html';" value="Trackinginformationen abrufen">
