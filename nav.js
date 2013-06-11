@@ -34,18 +34,9 @@ function loadCRMmain(id){
 }
 
 function loadUrlaub(){
-	$.ajax({
-	type: "POST",
-	url: self + "HR/urlaub/urlaubskalender.php",
-	beforeSend: function() {						
-		$('#content').html(loadingImageTag);
-	},
-	data: {					
-		test: 23
-	}
-}).done(function( msg ) {
-	$('#content').html(msg);
-});		
+fenster = window.open("/HR/urlaub/urlaubskalender.php", "Urlaub", "width=690,height=420,resizable=no");
+ fenster.focus();
+ return false;
 }
 
 function crm_openClientbyID(){

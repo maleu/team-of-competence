@@ -121,7 +121,7 @@
                                 <!-- Lager -->
                                 <?php if($_GET['role'] == "lager") {?> 
                                 <li><a href="javascript:loadHomepage();">Startseite</a></li>
-                                <li><a href="javascript:loadUrlaub();">Urlaub</a></li> 
+                                <li><a href="#" onclick="loadUrlaub();">Urlaub</a></li> 
                                 <li><a href="javascript:loadCRMmain('1');">CRMain</a></li>
                                 <li><a href="javascript:loadErpLagereinkauf();">Lagereinkauf</a></li>
                                 <li><a href="javascript:loadPage('ERP/Versandt/index_versandt.php', 'content');">Versand</a></li>
