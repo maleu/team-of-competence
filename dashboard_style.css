@@ -1,5 +1,5 @@
-.dashboard-div-left{float:left; width:45%; height: 200px; background-color:lightgray; margin: 2%; border: 1px solid gray;}
-.dashboard-div-right{float:right; width:45%; height:200px; background-color:lightgray; margin: 2%; border: 1px solid gray;}
+.dashboard-div-left{float:left; width:41%; height: 200px; margin: 2%; padding: 2%; border: 1px solid gray;}
+.dashboard-div-right{float:right; width:41%; height:200px; margin: 2%; padding: 2%; border: 1px solid gray;}
 #dashboard-top-left{}
 #dashboard-top-right{}
 #dashboard-row2-left{}
