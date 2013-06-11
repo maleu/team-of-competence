@@ -18,6 +18,7 @@
         <td>Vorname: <input type="text"/></td>
     </tr>
 </table>
-<p>Hinweis: Mehrfachauswahl mit der STRG Taste möglich!</p>
+<p>
 
-<a class="btn" href="javascript:$.growlUI('Growl Notification', 'Have a nice day!');">Abrechnen</a>
+<a class="btn" href="javascript:$.growlUI('Meldung erfolgreich versandt!');">Abrechnen</a>
+<p>Hinweis: Hierdurch wird automatisch eine Meldung versandt!</p>
