@@ -99,7 +99,7 @@
                                 <!-- Hier wird wahrscheinlich das Dashboard angezeigt: -->
                                 <li><a href="javascript:loadHomepage();">Startseite</a></li>
                                 <!-- Alle sonstigen Seiten -->
-                                <li><a href="javascript:loadUrlaub();">Urlaub</a></li>
+                                <li><a href="#" onclick="loadUrlaub();">Urlaub</a></li> 
                                 <li><a href="javascript:loadPage('FIBU/index_personalmanagement.php', 'content');">Personalmanagement</a></li>
                                 <li><a href="javascript:loadCRMmain('1');">CRMain</a></li>
                                 <li><a href="javascript:loadErpLagereinkauf();">Lagereinkauf</a></li>
@@ -109,13 +109,13 @@
                                 <!-- FiBu -->
                                 <?php if($_GET['role'] == "fibu") {?> 
                                 <li><a href="javascript:loadHomepage();">Startseite</a></li>                             
-                                <li><a href="javascript:loadUrlaub();">Urlaub</a></li>
+                                <li><a href="#" onclick="loadUrlaub();">Urlaub</a></li> 
                                 <li><a href="javascript:loadPage('FIBU/index_finanzbuchhaltung.php', 'content');">Finanzbuchhaltung</a></li>
                                     <?php } ?>
                                 <!-- HR -->
                                 <?php if($_GET['role'] == "hr") {?> 
                                 <li><a href="javascript:loadHomepage();">Startseite</a></li>
-                                <li><a href="javascript:loadUrlaub();">Urlaub</a></li> 
+                                <li><a href="#" onclick="loadUrlaub();">Urlaub</a></li> 
                                 <li><a href="javascript:loadPage('FIBU/index_personalmanagement.php', 'content');">Personalmanagement</a></li>
                                 <?php } ?>
                                 <!-- Lager -->
