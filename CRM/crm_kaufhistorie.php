@@ -1,3 +1,9 @@
+<script>$(document).ready(function()
+	{
+		$("#table_kaufhistorie").tablesorter();
+	}
+);
+</script>
 <?php
 if($id){
 include_once '../db_connect.php';
@@ -5,13 +11,15 @@ if (mysqli_connect_errno() ==0 )
 { ?>
 <div id='kaufhistorie'>
 	<table class="tablesorter" id="table_kaufhistorie" border="1" cellspacing="2" cellpadding="2">
-		<tbody>
+			<thead>
 			<tr class="toprow">
 				<td>Name</td>
 				<td>Preis</td>
 				<td>Verkaufsdatum</td>
                 <td>Kanal</td>
 			</tr>
+			</thead>
+			<tbody>
 	<?php 
 $sql = "SELECT KundenID, MitarbeiterID, Verkaufsdatum, Kanal, Name, Verkaufspreis FROM Verkaufsliste AS Verkauf JOIN Artikel AS Artikel ON Verkauf.ArtikelID = Artikel.ArtikelID WHERE Verkauf.KundenID=".$id;
 $result=$db->prepare($sql);
