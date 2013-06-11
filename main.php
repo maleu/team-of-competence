@@ -1,6 +1,7 @@
 <html>
     <head>
         <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+        <title>iColoris - Website</title>
         <?php
         include("nav.js");
         ini_set("display_errors", "1");
