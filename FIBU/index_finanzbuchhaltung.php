@@ -8,7 +8,7 @@
 
 <div class="navbar">
     <div class="navbar-inner">
-        <div class="container">
+        <!--<div class="container">-->
             <ul class="nav">
                 <li><a href="javascript:loadPage('FIBU/lohnGehaltAendern.php', 'sub-content');">Lohn/Gehalt-Änderung</a></li>
                 <li><a href="javascript:loadPage('FIBU/krankenkasseUeberweisen.php', 'sub-content');">Krankenkassenüberweisung</a></li>
@@ -16,7 +16,7 @@
                 <li><a href="javascript:loadPage('FIBU/wareingangsrechnungLieferantEditieren.php', 'sub-content');">Lieferant</a></li>
                 <li><a href="javascript:loadPage('FIBU/zahlungAnweisen.php', 'sub-content');">Zahlungsanweisung</a></li>
             </ul>
-        </div>
+        <!--</div>-->
     </div>
 </div>
 

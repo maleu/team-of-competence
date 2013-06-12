@@ -8,7 +8,7 @@
 
 <div class="navbar">
     <div class="navbar-inner">
-        <div class="container">
+        <!--<div class="container">-->
             <ul class="nav">
                 <li><a href="javascript:loadPage('ERP/Versandt/versandtart.php', 'sub-content');">Versandtart</a></li>
                 <li><a href="javascript:loadPage('ERP/Versandt/adressabgleich.php', 'sub-content');">Adressabgleich</a></li>
@@ -18,7 +18,7 @@
                 <li><a href="javascript:loadPage('ERP/Versandt/versandtStatusIntern.php', 'sub-content');">Versand Status</a></li>
                 <li><a href="javascript:loadPage('ERP/Versandt/paketTracking.php', 'sub-content');">Paket Tracking</a></li>
             </ul>
-        </div>
+        <!--</div>-->
     </div>
 </div>
 

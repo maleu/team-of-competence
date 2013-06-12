@@ -11,32 +11,32 @@
 
 <table>
     <tr>
-        <td>Mitarbeiter ID: <input type="text"/></td>
-        <td>Nachname: <input type="text"/></td>
+        <td>Mitarbeiter ID:</td><td><input type="text"/></td>
+        <td>Nachname:</td><td><input type="text"/></td>
     </tr>
     <tr>
-        <td></td>
-        <td>Vorname: <input type="text"/></td>
+        <td></td><td></td>
+        <td>Vorname:</td><td><input type="text"/></td>
     </tr>
 </table>
 
 <table>
     <tr>
-        <td>Kontoinhaber: (Nachname, Vorname)</td>
+        <td>Kontoinhaber:<br>(Nachname, Vorname)</td>
         <td><input type="text"/></td>
     </tr>
     <tr>
-        <td>Bankleitzahl</td>
+        <td>Bankleitzahl:</td>
         <td><input type="text"/></td>
     </tr>
     <tr>
-        <td>Kontonummer</td>
+        <td>Kontonummer:</td>
         <td><input type="text"/></td>
     </tr>
 </table>
 
 <textarea style="width: 100%;"></textarea>
 
-<a class="btn" href="javascript:$.growlUI('Betrag wurde angewiesen!');">Überweisen</a>
+<p><a class="btn" href="javascript:$.growlUI('Betrag wurde angewiesen!');">Überweisen</a></p>
 
 <p>Hinweis: Hierdurch wird automatisch eine Meldung versandt!</p>

@@ -15,15 +15,15 @@
         <td><input type="text"/></td>
     </tr>
     <tr>
-        <td>Lieferanten ID</td>
+        <td>Lieferanten ID:</td>
         <td><input type="text"/></td>
     </tr>
 </table>
 
 <table>
     <tr>
-        <td>Lieferant: [Name des Lieferanten]</td>
-        <td>Bankverbindung</td>
+        <td>Lieferant:<br>[Name des Lieferanten]</td>
+        <td>Bankverbindung:</td>
     </tr>
     <tr>
         <td><textarea style="width:100%;"></textarea></td>
@@ -38,5 +38,5 @@
     </tr>
 </table>
 
-<a class="btn" href="javascript:$.growlUI('Meldung wurde erfolgreich versandt!');">Überweisen</a>
+<p><a class="btn" href="javascript:$.growlUI('Meldung wurde erfolgreich versandt!');">Überweisen</a></p>
 <p>Hinweis: Hierdurch wird automatisch eine Meldung versandt!</p>

@@ -10,15 +10,15 @@
 
 <table>
     <tr>
-        <td>Mitarbeiter ID: <input type="text"/></td>
-        <td>Nachname: <input type="text"/></td>
+        <td>Mitarbeiter ID:</td><td><input type="text"/></td>
+        <td>Nachname:</td><td><input type="text"/></td>
     </tr>
     <tr>
-        <td></td>
-        <td>Vorname: <input type="text"/></td>
+        <td></td><td></td>
+        <td>Vorname:</td><td><input type="text"/></td>
     </tr>
 </table>
 
 
-<a class="btn" href="javascript:$.growlUI('Meldung erfolgreich versandt!');">Abrechnen</a>
+<p><a class="btn" href="javascript:$.growlUI('Meldung erfolgreich versandt!');">Abrechnen</a></p>
 <p>Hinweis: Hierdurch wird automatisch eine Meldung versandt!</p>

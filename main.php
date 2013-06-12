@@ -6,19 +6,27 @@
         include("nav.js");
         ini_set("display_errors", "1");
         error_reporting(E_ALL);
-		$role=$_GET['role'];
+
+        /*
+         * Ließt die übergebene Benutzerrolle aus, um eine angepasste Ausgabe
+         * zu ermöglichen. Initialisiert sie mit einem leeren Wert, falls
+         * keine Benutzerrolle übergeben wurde.
+         */
+        $role = isset($_GET['role']) ? $_GET['role'] : '';
         ?>
-        <link href="index.css" rel="stylesheet" type="text/css">
-        <link href="CRM/crm_style.css" rel="stylesheet" type="text/css">
-        <link href="dashboard_style.css" rel="stylesheet" type="text/css">
-        <link href="ERP/Lagereinkauf.css" rel="stylesheet" type="text/css">
-        <link href="webroot/css/bootstrap.min.css" rel="stylesheet" media="screen">
-        <!--<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="stylesheet" type="text/css" href="CRM/crm_style.css">
+        <link rel="stylesheet" type="text/css" href="dashboard_style.css">
+        <link rel="stylesheet" type="text/css" href="ERP/Lagereinkauf.css">
+        <link rel="stylesheet" type="text/css" href="webroot/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="webroot/css/anmeldung.css">
+        <link rel="stylesheet" type="text/css" href="webroot/css/default.css">
+        
         <script type="text/javascript" src="webroot/js/jquery-1.10.1.min.js"></script>
         <script type="text/javascript" src="webroot/js/jquery.blockUI.js"></script>
         <script type="text/javascript" src="webroot/js/icoloris.js"></script>
-		<script type="text/javascript" src="/path/to/jquery.tablesorter.js"></script>
-        <script src="webroot/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/path/to/jquery.tablesorter.js"></script>
+        <script type="text/javascript" src="webroot/js/bootstrap.min.js"></script>
         <script type="text/javascript">
             $(document).ready(function() {
                 loadHomepage();
@@ -30,118 +38,83 @@
         <div class=container>
 
             <div class=header>
-                <!--                <div class=logo>
-                
-                                </div>-->
 
                 <img src="001_images/LogoSky.png" class="img-rounded" style="">
 
-                <!--                <div class=headerRight>
-                                    <div class=headerMenu>
-                                        <div class=headerMenuElement>
-                                            FAQ
-                                        </div>
-                                        <div class=headerMenuElement>
-                                            Kontakt
-                                        </div>
-                
-                                    </div>
-                                    <div class=headerAccount>
-                                        <ul>
-                                            <li>Logout</li>
-                                        </ul>
-                                    </div>
-                                </div>-->
-
                 <div class="btn-toolbar" style="float:right;">
                     <div class="btn-group">
-                        <a class="btn"><i class="icon-question-sign"></i> FAQ</a>
-                        <a class="btn"><i class="icon-comment"></i> Kontakt</a>
-                        <a class="btn"><i class="icon-fullscreen"></i> Logout</a>      
+                        <a class="btn btn-info" href="javascript:$.growlUI('', 'Sie haben Post in Ihrem Postfach zur Abholung bereitliegen.');"><i class="icon-envelope"></i>Nachrichten</a>
+                        <a class="btn" href="./"><i class="icon-fullscreen"></i> Logout</a>      
                     </div>
                 </div>
 
-<!--                <table style="float:right; margin-right: 50px;">
-                    <tr>
-                        <td style="padding: 10px;"></td>
-                        <td style="padding: 10px;"><a class="btn btn-small"><i class="icon-comment"></i>Kontakt</a></td>
-                        <td style="padding: 10px;"><a class="btn btn-small"><i class="icon-fullscreen"></i>Logout</a></td>
-                    </tr>
-                </table>-->
-
+                <div class="btn-toolbar" style="float:right; margin-right: 30px;">
+                    <div class="btn-group">
+                        <a class="btn"><i class="icon-question-sign"></i> FAQ</a>
+                        <a class="btn" href="mailto:support@icoloris.tk?subject=iColoris - Kontaktanfrage"><i class="icon-comment"></i> Kontakt</a>
+                    </div>
+                </div>
             </div>
             <div class=body>
-                <!--                <div class=hauptnav>
-                                    <div class=hauptNavElement onclick="loadHomepage()">
-                                        Startseite
-                                    </div>
-                                    <div class=hauptNavElement onclick="loadCRMmain('1');">
-                                        CRMmain
-                                    </div>
-                                    <div class=hauptNavElement onclick="loadCRMtest();">
-                                        CRMtest
-                                    </div>
-                                    <div class=hauptNavElement onclick="loadErpLagereinkauf();">
-                                        Lagereinkauf
-                                    </div>
-                
-                                    <div class="hauptNavElement" onClick="javascript:loadPage('FIBU/index_personalmanagement.php', 'content');">Personalmanagement</div>
-                
-                                    <div class="hauptNavElement" onClick="javascript:loadPage('FIBU/index_finanzbuchhaltung.php', 'content');">Finanzbuchhaltung</div>
-                
-                                </div>-->
-
                 <div class="navbar">
                     <div class="navbar-inner">
-                        <div class="container">
+                        <!--<div class="container">-->
                             <ul class="nav">
-                            	<?php if(isset($_GET['role'])){ //if role ?>
-                                <!-- Prüfe, wer sich angemeldet hat -->
-                                
-                                <!-- Admin oder Geschäftsführung -->
-                                <?php if($_GET['role'] == "admin" || $_GET['role'] == "gf"){?>
-                                <!-- Hier wird wahrscheinlich das Dashboard angezeigt: -->
-                                <li><a href="javascript:loadHomepage();">Startseite</a></li>
-                                <!-- Alle sonstigen Seiten -->
-                                <li><a href="#" onclick="loadUrlaub();">Urlaub</a></li> 
-                                <li><a href="javascript:loadPage('FIBU/index_personalmanagement.php', 'content');">Personalmanagement</a></li>
-                                <li><a href="javascript:loadCRMmain('1');">CRMain</a></li>
-                                <li><a href="javascript:loadErpLagereinkauf();">Lagereinkauf</a></li>
-                                <li><a href="javascript:loadPage('ERP/Versandt/index_versandt.php', 'content');">Versand</a></li>
-                                    
-                                    <?php } ?>
-                                <!-- FiBu -->
-                                <?php if($_GET['role'] == "fibu") {?> 
-                                <li><a href="javascript:loadHomepage();">Startseite</a></li>                             
-                                <li><a href="#" onclick="loadUrlaub();">Urlaub</a></li> 
-                                <li><a href="javascript:loadPage('FIBU/index_finanzbuchhaltung.php', 'content');">Finanzbuchhaltung</a></li>
-                                    <?php } ?>
-                                <!-- HR -->
-                                <?php if($_GET['role'] == "hr") {?> 
-                                <li><a href="javascript:loadHomepage();">Startseite</a></li>
-                                <li><a href="#" onclick="loadUrlaub();">Urlaub</a></li> 
-                                <li><a href="javascript:loadPage('FIBU/index_personalmanagement.php', 'content');">Personalmanagement</a></li>
-                                <?php } ?>
-                                <!-- Lager -->
-                                <?php if($_GET['role'] == "lager") {?> 
-                                <li><a href="javascript:loadHomepage();">Startseite</a></li>
-                                <li><a href="#" onclick="loadUrlaub();">Urlaub</a></li> 
-                                <li><a href="javascript:loadCRMmain('1');">CRMain</a></li>
-                                <li><a href="javascript:loadErpLagereinkauf();">Lagereinkauf</a></li>
-                                <li><a href="javascript:loadPage('ERP/Versandt/index_versandt.php', 'content');">Versand</a></li>
-                                <?php } ?>   
-                                
+
+                                <?php
+                                switch ($role) {
+                                    case "admin":
+                                    case "gf":
+                                        ?>
+                                        <!-- Hier wird wahrscheinlich das Dashboard angezeigt: -->
+                                        <li><a href="javascript:loadHomepage();">Startseite</a></li>
+                                        <!-- Alle sonstigen Seiten -->
+                                        <li><a href="#" onclick="loadUrlaub();">Urlaub</a></li> 
+                                        <li><a href="javascript:loadPage('FIBU/index_personalmanagement.php', 'content');">Personalmanagement</a></li>
+                                        <li><a href="javascript:loadCRMmain('1');">CRMain</a></li>
+                                        <li><a href="javascript:loadErpLagereinkauf();">Lagereinkauf</a></li>
+                                        <li><a href="javascript:loadPage('ERP/Versandt/index_versandt.php', 'content');">Versand</a></li>
+                                        <?php
+                                        break;
+                                    case "fibu":
+                                        ?>
+                                        <li><a href="javascript:loadHomepage();">Startseite</a></li>                             
+                                        <li><a href="#" onclick="loadUrlaub();">Urlaub</a></li> 
+                                        <li><a href="javascript:loadPage('FIBU/index_finanzbuchhaltung.php', 'content');">Finanzbuchhaltung</a></li>
+                                        <?php
+                                        break;
+                                    case "hr":
+                                        ?>
+                                        <li><a href="javascript:loadHomepage();">Startseite</a></li>
+                                        <li><a href="#" onclick="loadUrlaub();">Urlaub</a></li> 
+                                        <li><a href="javascript:loadPage('FIBU/index_personalmanagement.php', 'content');">Personalmanagement</a></li>
+                                        <?php
+                                        break;
+                                    case "lager":
+                                        ?>
+                                        <li><a href="javascript:loadHomepage();">Startseite</a></li>
+                                        <li><a href="#" onclick="loadUrlaub();">Urlaub</a></li> 
+                                        <li><a href="javascript:loadCRMmain('1');">CRMain</a></li>
+                                        <li><a href="javascript:loadErpLagereinkauf();">Lagereinkauf</a></li>
+                                        <li><a href="javascript:loadPage('ERP/Versandt/index_versandt.php', 'content');">Versand</a></li>
+                                        <?php
+                                        break;
+                                }
+                                ?>
+
                             </ul>
-                        </div>
+                        <!--</div>-->
                     </div>
                 </div>
 
-                <hr>
-                <div id="content" class=content>
-                    Wird ersetzt.
-                </div>
-                <?php } else echo(" Sie sind nicht angemeldet, bitte über <a href='/'>Anmelden</a> fortfahren.")//end if no role 
-                                ?>
+                <?php if ($role === '') { ?>
+                    Sie sind nicht angemeldet, bitte über <a href='./'>Anmelden</a> fortfahren.
+                <?php } else { ?>
+                    <div id="content" class=content>
+
+                    </div>
+                <?php } ?>
+
             </div>
         </div>
 

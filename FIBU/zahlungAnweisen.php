@@ -17,15 +17,15 @@
         <td><input type="text"/></td>
     </tr>
     <tr>
-        <td>LieferantenID</td>
+        <td>LieferantenID:</td>
         <td><input type="text" /></td>
     </tr>
     <tr>
-        <td>Betrag</td>
+        <td>Betrag:</td>
         <td><input type="text" > </td>
     </tr>
 </table>
 
-<a class="btn" href="javascript:$.growlUI('Zahlung wurde angewiesen!');">Überweisen</a>
+<p><a class="btn" href="javascript:$.growlUI('Zahlung wurde angewiesen!');">Überweisen</a></p>
 
 <p>Hinweis: Hierdurch wird automatisch eine Meldung versandt!</p>

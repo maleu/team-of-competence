@@ -10,12 +10,12 @@
 
 <table>
     <tr>
-        <td>Mitarbeiter ID: <input type="text"/></td>
-        <td>Nachname: <input type="text"/></td>
+        <td>Mitarbeiter ID:</td><td><input type="text"/></td>
+        <td>Nachname:</td><td><input type="text"/></td>
     </tr>
     <tr>
-        <td></td>
-        <td>Vorname: <input type="text"/></td>
+        <td></td><td></td>
+        <td>Vorname:</td><td><input type="text"/></td>
     </tr>
 </table>
 
@@ -23,10 +23,10 @@
 
 <p>Bitte geben Sie den Betrag der Lohn-/ Gehaltsänderung ein!</p>
 <table>
-	<tr>
-    	<td>Betrag: <input type="number"/>€</td>
-        </tr>
-        </table>
+    <tr>
+        <td>Betrag:</td><td><input type="number"/>€</td>
+    </tr>
+</table>
 
-<a class="btn" href="javascript:$.growlUI('Lohn-/Gehalt wurde geändert!');">Abrechnen</a>
+<p><a class="btn" href="javascript:$.growlUI('Lohn-/Gehalt wurde geändert!');">Abrechnen</a></p>
 <p>Hinweis: Hierdurch wird automatisch eine Meldung versandt!</p>
