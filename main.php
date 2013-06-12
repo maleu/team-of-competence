@@ -25,6 +25,7 @@
         <script type="text/javascript" src="webroot/js/jquery-1.10.1.min.js"></script>
         <script type="text/javascript" src="webroot/js/jquery.blockUI.js"></script>
         <script type="text/javascript" src="webroot/js/icoloris.js"></script>
+        <!--<script type="text/javascript" src="nav.js"></script>-->
         <script type="text/javascript" src="/path/to/jquery.tablesorter.js"></script>
         <script type="text/javascript" src="webroot/js/bootstrap.min.js"></script>
         <script type="text/javascript">
@@ -43,8 +44,8 @@
 
                 <div class="btn-toolbar" style="float:right;">
                     <div class="btn-group">
-                        <a class="btn btn-info" href="javascript:$.growlUI('', 'Sie haben Post in Ihrem Postfach zur Abholung bereitliegen.');"><i class="icon-envelope"></i>Nachrichten</a>
-                        <a class="btn" href="./"><i class="icon-fullscreen"></i> Logout</a>      
+                        <?php if($role != ''){ ?><a class="btn btn-info" href="javascript:$.growlUI('', 'Sie haben Post in Ihrem Postfach zur Abholung bereitliegen.');"><i class="icon-envelope"></i>Nachrichten</a><?php } ?>
+                        <a class="btn" href="./"><i class="icon-fullscreen"></i> <?= ($role != '')?'Logout':'Login'; ?></a>      
                     </div>
                 </div>
 

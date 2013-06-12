@@ -1,9 +1,6 @@
 /* 
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * Lädt beliebige Datei vom Webserver und gibt sie in einer DIV-Box aus.
  */
-
-
 function loadPage(address, targetframe) {
     $.ajax({
         type: "POST",
