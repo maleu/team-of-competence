@@ -20,7 +20,7 @@ function lagerProduktnummerSuchen(){
 	});
 	
 }
-function einkaufUebernehmen(prodNummer, prodName, nettoPreis, i, lieferant){
+function einkaufUebernehmen(){
 // prodNummer, prodName, nettoPreis, i, lieferant
 	alert("DEBUG");
 	// divId = '#lagerMenge' + i;

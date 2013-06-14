@@ -3,71 +3,57 @@ include_once ('db_connect.php');
 
 $prodNummer = $_POST['prodNummer'];
 $prodName = $_POST['prodName'];
+$i = 1;
+if (mysqli_connect_errno() == 0) {
+	if ($prodName != "" || $prodName != "Produktnamen eingeben..."){
+		$sql = "SELECT ArtikelID, Name, Einkaufspreis, Lieferant, Bestand FROM Artikel WHERE Name LIKE '%$prodName%'";
+	}elseif ($prodNummer != "" || $prodNummer != "Produktnummer eingeben..."){	
+	$sql = "SELECT ArtikelID, Name, Einkaufspreis, Lieferant FROM Artikel WHERE ArtikelID = $prodNummer";
+	}else{
+	exit;
+	}
+	$result = $db -> prepare($sql);
+	$result -> execute();
+	$result -> store_result();
+	$num_rows = $result -> num_rows();
+	if ($num_rows !== 0) {
+		$result -> bind_result($produktNummer, $produktBezeichnung, $nettoPreis, $lieferant, $bestand);
+		while ($result -> fetch()) {
+			echo'
+				<div class=lagerBestellungTabelleZeile>
+					<div class=lagerBestellungTabelleBElement>
+						'.$produktNummer.'
+					</div>
+					<div class=lagerBestellungTabelleBElement>
+						'.$produktBezeichnung.'
+					</div>
+					<div class=lagerBestellungTabelleBElement>
+						'.$nettoPreis.'
+					</div>
+					<div class=lagerBestellungTabelleBElement>
+						'.$bestand.'
+					</div>
+					<div class=lagerBestellungTabelleBElement>
+						<input size="1" type="text" id="lagerMenge'.$i.'" value=""/>
+					</div>
+					<div class=lagerBestellungTabelleBElement>
+						'.$lieferant.'
+					</div>
+					<div class=lagerBestellungTabelleBElement>
+						<input type="button" id="einkaufUebernehmen" value="Bestellen" onclick="einkaufUebernehmen()" />
+					</div>
+				</div>
+			';
+			$i++;
+		}
+	}//end if more than 0 results
 
-// if (mysqli_connect_errno() == 0) {
-	// $sql = "SELECT * FROM EinkaufBestellung WHERE Produktnummer = $produknummer;";
-	// $result = $db -> prepare($sql);
-	// $result -> execute();
-	// $result -> store_result();
-	// $num_rows = $result -> num_rows();
-	// if ($num_rows !== 0) {
-		// $result -> bind_result($produktNummer, $produktBezeichnung, $nettoPreis, $lieferant);
-		// while ($result -> fetch()) {
-			// echo '
-				// <div class=lagerBestellungTabelleZeile>
-					// <div class=lagerBestellungTabelleBElement>
-						// $produktNummer
-					// </div>
-					// <div class=lagerBestellungTabelleBElement>
-						// $produktBezeichnung
-					// </div>
-					// <div class=lagerBestellungTabelleBElement>
-						// $nettoPreis
-					// </div>
-					// <div class=lagerBestellungTabelleBElement>
-						// <input type="text" id="lagerMenge" size="1" value=""/>
-					// </div>
-					// <div class=lagerBestellungTabelleBElement>
-						// $lieferant
-					// </div>
-				// </div>
-			// ';
-		// }
-	// }//end if more than 0 results
-
-// }// end if no error
-// else {echo("<div id='dbcon'>No DB Connection possible at all, error is " . mysqli_connect_errno() . " : " . mysqli_connect_error() . "</div><!--end dbcon -->");
-// }
+}// end if no error
+else {echo("<div id='dbcon'>No DB Connection possible at all, error is " . mysqli_connect_errno() . " : " . mysqli_connect_error() . "</div><!--end dbcon -->");
+}
 
 if ($prodName == "" || $prodName == "Produktnamen eingeben...") {
-	$prodName = "einkauf";
+	$prodName = "";
 }
-$nettoPreis = 100;
-$lieferant = "Test Lieferant";
-
-$i = 1;
-echo'
-	<div class=lagerBestellungTabelleZeile>
-		<div class=lagerBestellungTabelleBElement>
-			'.$prodNummer.'
-		</div>
-		<div class=lagerBestellungTabelleBElement>
-			'.$prodName.'
-		</div>
-		<div class=lagerBestellungTabelleBElement>
-			'.$nettoPreis.'
-		</div>
-		<div class=lagerBestellungTabelleBElement>
-			<input type="text" id="lagerMenge'.$i.'" size="1" value=""/>
-		</div>
-		<div class=lagerBestellungTabelleBElement>
-			'.$lieferant.'
-		</div>
-		<div class=lagerBestellungTabelleBElement>
-			<input type="button" id="einkaufUebernehmen" value="&Uuml;bernehmen" onclick="einkaufUebernehmen('.$prodNummer.', '.$prodNummer.', 5, 5, 5)" />
-		</div>
-	</div>
-';
-// <input type="button" id="einkaufUebernehmen" value="&Uuml;bernehmen" onclick="einkaufUebernehmen('.$prodNummer.', '.$prodName.', '.$nettoPreis.', '.$i.', '.$lieferant.')" />
 
 ?>
