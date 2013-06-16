@@ -4,6 +4,7 @@
     </head>
     
     <body>
+        <h1>Neuen Mitarbeiter anlegen</h1>
         <form action="hr_MA_check.php" method="POST">
             <!-- SV-Nummer prüfen -->
             <input name="Vorname" type="text">    Vorname</input><br><br>
@@ -27,8 +28,8 @@
                 <option value="FiBu">Finanzbuchhaltung</option>                
             </select>
             <p>
-            <input name="submit" type="submit" value="Benutzer anlegen">
-            <input name="reset" type="reset" value="Felder zurücksetzen">
+            <input name="submit" class="btn" type="submit" value="Benutzer anlegen" onclick="javascript:loadPage('HR/hr_MA_check.php', 'sub-content')">
+            <input name="reset" class="btn" type="reset" value="Felder zurücksetzen">
             
         </form>
         

@@ -158,14 +158,14 @@ $check_empty = true;
         else {
             echo('Korrigieren Sie bitte die Eingaben.<br>');
             echo('<form>
-              <input type="button" value="Zurück" onClick="hr_MA_check_back()" />
+              <input type="button" class="btn" value="Zurück" onClick="javascript:loadPage("HR/hr_MA_eingabemaske.php", "sub-content")" />
               </form> ');
         }
     } else {
         echo('Vervollständigen Sie bitte die Eingaben.<br>');
-        echo('<form>
-              <input type="button" value="Zurück" onClick="javascript:history.go(-1)" />
-              </form> ');
+        echo('
+              <input type="button" class="btn" value="Zurück" onClick="javascript:loadPage("HR/hr_MA_eingabemaske.php", "sub-content")" />
+              ');
     }
 
 
