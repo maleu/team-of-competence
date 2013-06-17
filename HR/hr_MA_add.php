@@ -3,9 +3,10 @@ include_once '../db_connect.php';
 
 if (mysqli_connect_errno() == 0) {
     
-    $data = $_POST['sql'];
+    $data = $_POST['sqldata'];
     
-    //echo($data);
+    
+    //echo("Daten aus hidden field: ".$data);
     
     //Befehl zerlegen
     $d = explode(",",$data);
@@ -46,11 +47,7 @@ if (mysqli_connect_errno() == 0) {
     //Mitarbeiter schon vorhanden..
     else {
         
-        echo('Der Mitarbeiter "'.$d[3].' '.$d[4].'" mit dem Benutzernamen "'.$d[2].'" ist bereits vorhanden!');
-        echo('<form>
-              <input type="button" value="Zurück" onClick="javascript:history.go(-2)" />
-              </form> ');
-        
+        echo('Der Mitarbeiter "'.$d[3].' '.$d[4].'" mit dem Benutzernamen "'.$d[2].'" ist bereits vorhanden!');        
     }
         
    

@@ -1,11 +1,30 @@
+<script language="text/javascript">
+function sendData() {
+    var str = $("#Eingabeform").serialize();
+    var r = $.ajax({
+        type: 'POST',
+        data: str,
+        url: 'HR/hr_MA_check.php',
+        async: false
+    }).responseText;
+    
+    $("#calculation").empty().append(r);
+
+}
+
+
+</script>
+
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     </head>
     
     <body>
+        
         <h1>Neuen Mitarbeiter anlegen</h1>
-        <form action="hr_MA_check.php" method="POST">
+        <table><tr><td>
+        <form id="Eingabeform" action="HR/hr_MA_check.php" method="POST">
             <!-- SV-Nummer prüfen -->
             <input name="Vorname" type="text">    Vorname</input><br><br>
             <input name="Nachname" type="text">    Nachname</input><br><br>
@@ -28,11 +47,14 @@
                 <option value="FiBu">Finanzbuchhaltung</option>                
             </select>
             <p>
-            <input name="submit" class="btn" type="submit" value="Benutzer anlegen" onclick="javascript:loadPage('HR/hr_MA_check.php', 'sub-content')">
+            <input name="submit" class="btn" type="button" value="Benutzer anlegen" onclick="javascript:sendData();" >
             <input name="reset" class="btn" type="reset" value="Felder zurücksetzen">
             
-        </form>
-        
+        </form></td><td>
+            <div id="calculation"></div>
+        </td>
+        </tr>
+        </table>
         
     </body>
     

@@ -1,25 +1,25 @@
-<script language="text/javascript">
+<script language="text/javascript">            
+function uploadData() {
+
+            var str = $("#PassData").serialize();
+    var r = $.ajax({
+        type: 'POST',
+        data: str,
+        url: 'HR/hr_MA_add.php',
+        async: false
+    }).responseText;
     
-    function hr_MA_check_back() {
-	$.ajax({
-		type: "POST",
-		url: self + "hr_MA_eingabemaske.php",
-		beforeSend: function() {	
-			$('#lagerBestellungTabelleBody').html(loadingImageTag);
-		},
-		data: {		
-			produktnummer: produktnummer
-		}
-	}).done(function( msg ) {
-	alert(msg);
-		$('#lagerBestellungTabelleBody').html(msg);
-	});
-	
-    }
+    $("#uploaded").empty().append(r);
+
+}
+
+</script>
     
     </script>
 
 <?php
+
+echo('<div id="uploaded" />');
 
 $check_empty = true;
 
@@ -146,25 +146,26 @@ $check_empty = true;
             echo('Sind diese Eingaben korrekt? Klicken Sie zum Fortfahren auf Weiter.<p>');
             
             
-
-            echo('<form action="hr_MA_add.php" method="POST">
-                <input type="hidden" name="sql" value="'.$sql.'" />
-              <input type="button" value="Zurück" onClick="javascript:history.go(-1)" />
-              <input type="submit" name="submit" value="Weiter" />
-              </form> ');
+               
+            echo('<form id="PassData" action="HR/hr_MA_add.php" method="POST">
+                <input type="hidden" id="sqldata" name="sqldata" value="'.$sql.'" />
+              
+              <input type="button" class="btn" value="Weiter" onclick="javascript:uploadData();" />
+              </form>
+              ');
         }
 
         //Fehlerhafte Eingaben
         else {
             echo('Korrigieren Sie bitte die Eingaben.<br>');
             echo('<form>
-              <input type="button" class="btn" value="Zurück" onClick="javascript:loadPage("HR/hr_MA_eingabemaske.php", "sub-content")" />
+             
               </form> ');
         }
     } else {
         echo('Vervollständigen Sie bitte die Eingaben.<br>');
         echo('
-              <input type="button" class="btn" value="Zurück" onClick="javascript:loadPage("HR/hr_MA_eingabemaske.php", "sub-content")" />
+             
               ');
     }
 
