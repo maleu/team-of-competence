@@ -44,7 +44,7 @@
   <p>Wählen Sie ein Versandart aus:</p>
   <p>
     <input type="radio" name="versandart" value="DHL"> 
-    DHddL<br>
+    DHL<br>
     <input type="radio" name="versandart" value="DHL Express"> 
     DHL Express<br>
     <input type="radio" name="versandart" value="UPS"> UPS<br>
