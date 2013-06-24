@@ -43,13 +43,13 @@
 	<div class=lagerBody>
 		<b>Artikelverwaltung</b>
 		<div class=lagerBodyBestellung>
-			<input type="text" id="lagerProduktnummer" size="50" value="Produktnummer eingeben..." 
+			<input type="text" id="lagerArtikelnummer" size="50" value="Produktnummer eingeben..." 
 				onblur="if (this.value == '') {this.value = 'Produktnummer eingeben...';}"
 				onfocus="if (this.value == 'Produktnummer eingeben...') {this.value = '';}"/>
-			<input type="text" id="lagerProduktname" size="50" value="Produktnamen eingeben..." 
+			<input type="text" id="lagerArtikelname" size="50" value="Produktnamen eingeben..." 
 				onblur="if (this.value == '') {this.value = 'Produktnamen eingeben...';}"
 				onfocus="if (this.value == 'Produktnamen eingeben...') {this.value = '';}"/>
-			<input type="button" id="lagerProduktnummerSuchen" value="Suchen" onclick="lagerProduktnummerSuchen()" />
+			<input type="button" id="lagerArtikelnummerSuchen" value="Suchen" onclick="lagerArtikelnummerSuchen()" />
 			<div class=lagerBestellungTabelleHeader>
 				<div class=lagerBestellungTabelleHElement>
 					Artikel ID

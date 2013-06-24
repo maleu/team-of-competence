@@ -5,13 +5,14 @@ $prodNummer = $_POST['prodNummer'];
 $prodName = $_POST['prodName'];
 $i = 1;
 if (mysqli_connect_errno() == 0) {
-	if ($prodName != "" || $prodName != "Produktnamen eingeben..."){
+	if ($prodName != "Produktnamen eingeben..."){
 		$sql = "SELECT ArtikelID, Name, Einkaufspreis, Lieferant, Bestand FROM Artikel WHERE Name LIKE '%$prodName%'";
-	}elseif ($prodNummer != "" || $prodNummer != "Produktnummer eingeben..."){	
-	$sql = "SELECT ArtikelID, Name, Einkaufspreis, Lieferant FROM Artikel WHERE ArtikelID = $prodNummer";
+	}elseif ($prodNummer != "Produktnummer eingeben..."){	
+		$sql = "SELECT ArtikelID, Name, Einkaufspreis, Lieferant, Bestand FROM Artikel WHERE ArtikelID = $prodNummer";
 	}else{
-	exit;
+		exit;
 	}
+	
 	$result = $db -> prepare($sql);
 	$result -> execute();
 	$result -> store_result();
@@ -21,26 +22,26 @@ if (mysqli_connect_errno() == 0) {
 		while ($result -> fetch()) {
 			echo'
 				<div class=lagerBestellungTabelleZeile>
-					<div class=lagerBestellungTabelleBElement>
+					<div class=lagerBestellungTabelleBElement id="produktNummer'.$i.'" data="'.$produktNummer.'">
 						'.$produktNummer.'
 					</div>
-					<div class=lagerBestellungTabelleBElement>
+					<div class=lagerBestellungTabelleBElement id="produktBezeichnung'.$i.'" data="'.$produktBezeichnung.'">
 						'.$produktBezeichnung.'
 					</div>
-					<div class=lagerBestellungTabelleBElement>
+					<div class=lagerBestellungTabelleBElement id="nettoPreis'.$i.'" data="'.$nettoPreis.'">
 						'.$nettoPreis.'
 					</div>
-					<div class=lagerBestellungTabelleBElement>
+					<div class=lagerBestellungTabelleBElement id="bestand'.$i.'" data="'.$bestand.'">
 						'.$bestand.'
 					</div>
 					<div class=lagerBestellungTabelleBElement>
-						<input size="1" type="text" id="lagerMenge'.$i.'" value=""/>
+						<input style="width:100px;" type="text" id="lagerMenge'.$i.'" value=""/>
 					</div>
-					<div class=lagerBestellungTabelleBElement>
+					<div class=lagerBestellungTabelleBElement id="lieferant'.$i.'" data="'.$lieferant.'">
 						'.$lieferant.'
 					</div>
 					<div class=lagerBestellungTabelleBElement>
-						<input type="button" id="einkaufUebernehmen" value="Bestellen" onclick="einkaufUebernehmen()" />
+						<input type="button" id="einkaufUebernehmen'.$i.'" value="Bestellen" onclick="einkaufUebernehmen('.$i.')" />
 					</div>
 				</div>
 			';
@@ -52,8 +53,5 @@ if (mysqli_connect_errno() == 0) {
 else {echo("<div id='dbcon'>No DB Connection possible at all, error is " . mysqli_connect_errno() . " : " . mysqli_connect_error() . "</div><!--end dbcon -->");
 }
 
-if ($prodName == "" || $prodName == "Produktnamen eingeben...") {
-	$prodName = "";
-}
 
 ?>
