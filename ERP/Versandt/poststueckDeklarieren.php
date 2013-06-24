@@ -43,7 +43,8 @@
 <form action="input_radio.htm">
   <p>Wählen Sie ein Versandart aus:</p>
   <p>
-    <input type="radio" name="versandart" value="DHL"> DHL<br>
+    <input type="radio" name="versandart" value="DHL"> 
+    DHddL<br>
     <input type="radio" name="versandart" value="DHL Express"> 
     DHL Express<br>
     <input type="radio" name="versandart" value="UPS"> UPS<br>
