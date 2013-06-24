@@ -10,7 +10,7 @@
     <div class="navbar-inner">
         <!--<div class="container">-->
             <ul class="nav">
-                <li><a href="javascript:loadPage('ERP/Versandt/versandtart.php', 'sub-content');">Versandart</a></li>
+                
                 <li><a href="javascript:loadPage('ERP/Versandt/adressabgleich.php', 'sub-content');">Adressabgleich</a></li>
                 <li><a href="javascript:loadPage('ERP/Versandt/poststueckDeklarieren.php', 'sub-content');">Poststück deklarieren</a></li>
                 <li><a href="javascript:loadPage('ERP/Versandt/paketZusammenfassen.php', 'sub-content');">Paket zusammenfassen</a></li>
