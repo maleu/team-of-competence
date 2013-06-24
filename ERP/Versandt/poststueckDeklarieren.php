@@ -40,6 +40,18 @@
     </tr>
 </table>
 <p>
+<form action="input_radio.htm">
+  <p>Wählen Sie ein Versandart aus:</p>
+  <p>
+    <input type="radio" name="versandart" value="DHL"> DHL<br>
+    <input type="radio" name="versandart" value="DHL Express"> 
+    DHL Express<br>
+    <input type="radio" name="versandart" value="UPS"> UPS<br>
+    <input type="radio" name="versandart" value="Spedition"> Spedition<br>
+    <input type="radio" name="versandart" value="Deutsche Bahn"> Deutsche Bahn<br>
+    <input type="radio" name="versandart" value="Selbstabholung"> Selbstabholung
+  </p>
+</form>
 
 
-<a class="btn" href="javascript:$.growlUI('Poststück wurde deklariert!');">Deklarieren</a>
+<a class="btn" href="javascript:$.growlUI('Poststück wurde deklariert!');">Bestätigen</a>
