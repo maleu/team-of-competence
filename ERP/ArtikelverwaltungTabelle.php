@@ -25,20 +25,23 @@ if (mysqli_connect_errno() == 0) {
 					<div class=lagerBestellungTabelleBElement id="produktNummer'.$i.'" data="'.$produktNummer.'">
 						'.$produktNummer.'
 					</div>
-					<div class=lagerBestellungTabelleBElement id="produktBezeichnung'.$i.'" data="'.$produktBezeichnung.'" onclick="artikelEdit(produktBezeichnung'.$i.')">
+					<div class=lagerBestellungTabelleBElement id="produktBezeichnung'.$i.'" data="'.$produktBezeichnung.'" onclick="artikelEdit(produktBezeichnung'.$i.', '.$i.', 1)">
 						'.$produktBezeichnung.'
 					</div>
-					<div class=lagerBestellungTabelleBElement id="nettoPreis'.$i.'" data="'.$nettoPreis.'" onclick="artikelEdit(nettoPreis'.$i.')">
+					<div class=lagerBestellungTabelleBElement id="nettoPreis'.$i.'" data="'.$nettoPreis.'" onclick="artikelEdit(nettoPreis'.$i.', '.$i.', 2)">
 						'.$nettoPreis.'
 					</div>
-					<div class=lagerBestellungTabelleBElement id="bestand'.$i.'" data="'.$bestand.'" onclick="artikelEdit(bestand'.$i.')">
+					<div class=lagerBestellungTabelleBElement id="bestand'.$i.'" data="'.$bestand.'" onclick="artikelEdit(bestand'.$i.', '.$i.', 3)">
 						'.$bestand.'
 					</div>
-					<div class=lagerBestellungTabelleBElement id="verkaufsPreis'.$i.'" data="'.$verkaufsPreis.'" onclick="artikelEdit(verkaufsPreis'.$i.')">
+					<div class=lagerBestellungTabelleBElement id="verkaufsPreis'.$i.'" data="'.$verkaufsPreis.'" onclick="artikelEdit(verkaufsPreis'.$i.', '.$i.', 4)">
 						'.$verkaufsPreis.'
 					</div>
-					<div class=lagerBestellungTabelleBElement id="lieferant'.$i.'" data="'.$lieferant.'" onclick="artikelEdit(lieferant'.$i.')">
+					<div class=lagerBestellungTabelleBElement id="lieferant'.$i.'" data="'.$lieferant.'" onclick="artikelEdit(lieferant'.$i.', '.$i.', 5)">
 						'.$lieferant.'
+					</div>
+					<div class=lagerBestellungTabelleBElement id="arterstellen">
+						<input style="width:100px;" type="button" id="artikelDelete" value="l&ouml;schen" onclick="doArtikelDelete('.$i.')"/>
 					</div>
 				</div>
 			';

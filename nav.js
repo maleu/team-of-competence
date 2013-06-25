@@ -110,5 +110,17 @@ data: {
 $('#content').html(msg);
 });	
 }
-
+function loadErpKundenBestellung(){
+$.ajax({
+type: "POST",
+url: self + "ERP/Kundenbestellung.php",
+beforeSend: function() {	
+$('#content').html(loadingImageTag);
+},
+data: {	
+}
+}).done(function( msg ) {
+$('#content').html(msg);
+});	
+}
 </script>

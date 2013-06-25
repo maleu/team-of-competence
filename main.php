@@ -73,7 +73,8 @@
                                         <li><a href="#" onclick="loadUrlaub();">Urlaub</a></li> 
                                         <li><a href="javascript:loadPage('FIBU/index_personalmanagement.php', 'content');">Personalmanagement</a></li>
                                         <li><a href="javascript:loadCRMmain('1');">CRMain</a></li>
-                                        <li><a href="javascript:loadErpLagereinkauf();">Lagereinkauf</a></li>
+										<li><a href="javascript:loadErpKundenBestellung();">Kundenbestellung</a></li>
+                                        <li><a href="javascript:loadErpLagereinkauf();">Artikel kaufen & verwalten</a></li>
                                         <li><a href="javascript:loadPage('ERP/Versandt/index_versandt.php', 'content');">Versand</a></li>
                                         <?php
                                         break;
@@ -96,7 +97,8 @@
                                         <li><a href="javascript:loadHomepage();">Startseite</a></li>
                                         <li><a href="#" onclick="loadUrlaub();">Urlaub</a></li> 
                                         <li><a href="javascript:loadCRMmain('1');">CRMain</a></li>
-                                        <li><a href="javascript:loadErpLagereinkauf();">Lagereinkauf</a></li>
+										<li><a href="javascript:loadErpKundenBestellung();">Kundenbestellung</a></li>
+                                        <li><a href="javascript:loadErpLagereinkauf();">Artikel kaufen & verwalten</a></li>
                                         <li><a href="javascript:loadPage('ERP/Versandt/index_versandt.php', 'content');">Versand</a></li>
                                         <?php
                                         break;
