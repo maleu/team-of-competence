@@ -9,6 +9,6 @@
 		Telefonnummer: <input name="P_Telefon" type="text" class='crmNeukundeForm' id="crm_input_Telefon" maxlength="20" />
 		Email: <input name="P_Email" type="text" class='crmNeukundeForm' id="crm_input_Email" maxlength="20" />
 		MitarbeiterID: <input name="P_Mitarbeiter" type="text" class='crmNeukundeForm' id="crm_input_Mitarbeiter" maxlength="20" />
-		<button type="button" id='crm_createClientButton' onclick="crm_createClientSubmit()" class='crmNeukundeForm'>erstellen</button>
+		<id='crm_createClientButton' onclick="crm_createClientSubmit()" class='crmNeukundeForm'><a class="btn" href="javascript:$.growlUI('Meldung erfolgreich erstellt!');">erstellen</a>
 	</form>
 </div>
