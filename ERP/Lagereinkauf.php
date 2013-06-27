@@ -65,7 +65,7 @@
 					Bestand
 				</div>
 				<div class=lagerBestellungTabelleHElement>
-					Verkauspreis
+					Verkaufspreis
 				</div>
 				<div class=lagerBestellungTabelleHElement>
 					Lieferant

@@ -72,7 +72,7 @@
                                         <!-- Alle sonstigen Seiten -->
                                         <li><a href="#" onclick="loadUrlaub();">Urlaub</a></li> 
                                         <li><a href="javascript:loadPage('FIBU/index_personalmanagement.php', 'content');">Personalmanagement</a></li>
-                                        <li><a href="javascript:loadCRM('1');">CRM</a></li>
+                                        <li><a href="javascript:loadCRMmain('1');">CRM</a></li>
 										<li><a href="javascript:loadErpKundenBestellung();">Kundenbestellung</a></li>
                                         <li><a href="javascript:loadErpLagereinkauf();">Artikel kaufen & verwalten</a></li>
                                         <li><a href="javascript:loadPage('ERP/Versandt/index_versandt.php', 'content');">Versand</a></li>
