@@ -16,7 +16,7 @@ if (mysqli_connect_errno() ==0 )
 			<?php 
 $sql = "SELECT `Datum` , `Kontaktart` , `Inhalt` , `Vorname` , `Nachname` , `KontaktID`
 FROM kontaktverlauf AS kontakt
-JOIN Mitarbeiter AS mitarbeiter ON kontakt.MitarbeiterID = mitarbeiter.MitarbeiterID
+JOIN mitarbeiter AS mitarbeiter ON kontakt.MitarbeiterID = mitarbeiter.MitarbeiterID
 WHERE KundenID =".$id;
 $result=$db->prepare($sql);
 $result->execute();
@@ -34,9 +34,9 @@ while ($result->fetch()){
 			<?php }    //end while ?> 
 		</tbody>
 	</table>
-		<button class='crmNav' name="newContact" onclick="crm_createContact()" id="crm_newContact" value="new">
-			Kontakt eintragen
-		</button>
+		 <class='crmNav' name="newContact" onclick="crm_createContact()" id="crm_newContact" value="new">
+			
+                <a class="btn" href="javascript:$.growlUI('Meldung erfolgreich eingetragen!');">Kontakt eintragen</a>
 </div>
 <?php
 	} // end if no error
